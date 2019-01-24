@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java" />
         <module name="netty" />
+        <module name="scala" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java" target="1.8" />
       <module name="netty" target="1.8" />
+      <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
     </bytecodeTargetLevel>
   </component>

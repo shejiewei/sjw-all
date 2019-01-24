@@ -1,2 +1,0 @@
-spi.OptimusPrime
-spi.Bumblebee

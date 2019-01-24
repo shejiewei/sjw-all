@@ -23,6 +23,7 @@
     <modules>
         <module>netty</module>
         <module>java</module>
+        <module>scala</module>
     </modules>
 
 
