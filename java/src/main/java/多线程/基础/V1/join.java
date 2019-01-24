@@ -1,4 +1,4 @@
-package 多线程.V1;
+package 多线程.基础.V1;
 
 /**
  * Created by shejiewei on 2019/1/24.
