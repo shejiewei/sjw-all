@@ -8,7 +8,6 @@ class thread11 extends  Thread{
 
     public String name;
     public thread11(String name){
-
         this.name=name;
     }
     public  void run(){
