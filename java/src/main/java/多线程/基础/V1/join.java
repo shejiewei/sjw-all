@@ -40,6 +40,8 @@ public class join {
          b.start();
          A.join();
 
+
+
          b.join();
       System.out.println("主线程结束");
 
