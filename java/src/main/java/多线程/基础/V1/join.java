@@ -15,7 +15,6 @@ class thread11 extends  Thread{
 
         for (int i=0;i<50;i++){
             System.out.println(Thread.currentThread().getName()+"线程输出"+i);
-
             if(i==30)
             {
                 this.yield();
