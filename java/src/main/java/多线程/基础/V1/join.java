@@ -37,6 +37,8 @@ public class join {
          thread11 b = new thread11("B");
          A.start();
          b.start();
+
+
          A.join();
 
          b.join();
