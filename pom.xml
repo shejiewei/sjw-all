@@ -24,6 +24,7 @@
         <module>netty</module>
         <module>java</module>
         <module>scala</module>
+        <module>kafka</module>
     </modules>
 
 

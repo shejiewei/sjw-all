@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java" />
+        <module name="kafka" />
         <module name="netty" />
         <module name="scala" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java" target="1.8" />
+      <module name="kafka" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
