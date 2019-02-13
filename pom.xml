@@ -25,6 +25,7 @@
         <module>java</module>
         <module>scala</module>
         <module>kafka</module>
+        <module>springcloud</module>
     </modules>
 
 
