@@ -5,6 +5,7 @@ package scala.trait工厂方法
   */
 object test {
 
+
   def main(args: Array[String]): Unit = {
     val cat=ani("cat")
     cat.speak
