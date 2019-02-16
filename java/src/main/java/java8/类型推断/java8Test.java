@@ -18,9 +18,20 @@ public class java8Test
          System.out.println("10-5="+test.operate(10,5,sub));
          System.out.println("10*5="+test.operate(10,5,multi));
          System.out.println("10*5="+test.operate(10,5,division));
-      }
+
+        GreetingMessage greet1=Message ->
+                System.out.println("greet1"+Message);
+        GreetingMessage greet2=(Message)->
+                System.out.println("greet2"+Message);
+        greet1.sayMessage("11");
+        greet2.sayMessage("22");
+
+     }
       interface  MathOperation{
          int operation(int a,int b);
+      }
+      interface GreetingMessage{
+         void sayMessage(String Message);
       }
       private int operate(int a,int b,MathOperation mathOperation)
       {
