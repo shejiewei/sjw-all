@@ -3,12 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kafka/kafka.iml" filepath="$PROJECT_DIR$/kafka/kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala/scala.iml" filepath="$PROJECT_DIR$/scala/scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/sjw-all.iml" filepath="$PROJECT_DIR$/sjw-all.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloud/springbootdocker.iml" filepath="$PROJECT_DIR$/springcloud/springbootdocker.iml" />
+      <module fileurl="file://D:\gitbase\sjw-all\springcloud\springbootdocker.iml" filepath="D:\gitbase\sjw-all\springcloud\springbootdocker.iml" />
     </modules>
   </component>
 </project>

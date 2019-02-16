@@ -7,22 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java" />
-        <module name="kafka" />
         <module name="netty" />
         <module name="scala" />
-        <module name="springboot" />
-        <module name="springbootdocker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java" target="1.8" />
-      <module name="kafka" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
-      <module name="springboot" target="1.8" />
-      <module name="springbootdocker" target="1.8" />
-      <module name="springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
