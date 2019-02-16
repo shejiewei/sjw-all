@@ -8,7 +8,6 @@ class thread11 extends  Thread{
 
     public String name;
     public thread11(String name){
-
         this.name=name;
     }
     public  void run(){
@@ -16,7 +15,6 @@ class thread11 extends  Thread{
 
         for (int i=0;i<50;i++){
             System.out.println(Thread.currentThread().getName()+"线程输出"+i);
-
             if(i==30)
             {
                 this.yield();
@@ -38,7 +36,10 @@ public class join {
          thread11 A = new thread11("A");
          thread11 b = new thread11("B");
          A.start();
+
          b.start();
+
+
          A.join();
 
          b.join();
