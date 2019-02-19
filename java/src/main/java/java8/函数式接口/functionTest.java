@@ -32,6 +32,7 @@ public class functionTest {
          for(Integer i:list){
              if(predicate.test(i))
              {
+
                  System.out.print(i+"");
              }
 

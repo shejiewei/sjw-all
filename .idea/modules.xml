@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala/scala.iml" filepath="$PROJECT_DIR$/scala/scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/sjw-all.iml" filepath="$PROJECT_DIR$/sjw-all.iml" />
-      <module fileurl="file://D:\gitbase\sjw-all\springcloud\springbootdocker.iml" filepath="D:\gitbase\sjw-all\springcloud\springbootdocker.iml" />
     </modules>
   </component>
 </project>
