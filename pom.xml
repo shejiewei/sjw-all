@@ -25,6 +25,7 @@
         <module>java</module>
         <module>scala</module>
         <module>hadoop</module>
+        <module>hive</module>
     </modules>
 
 
