@@ -13,6 +13,7 @@
         <module name="netty" />
         <module name="scala" />
         <module name="springboot" />
+        <module name="springboot (1)" />
         <module name="springcloud" />
       </profile>
     </annotationProcessing>
@@ -24,7 +25,8 @@
       <module name="netty" target="1.8" />
       <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
-      <module name="springboot" target="1.5" />
+      <module name="springboot" target="1.8" />
+      <module name="springboot (1)" target="1.8" />
       <module name="springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
