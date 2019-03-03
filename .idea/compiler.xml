@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hadoop" />
+        <module name="hbase" />
         <module name="hive" />
         <module name="java" />
         <module name="netty" />
@@ -17,12 +18,13 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hadoop" target="1.7" />
+      <module name="hbase" target="1.8" />
       <module name="hive" target="1.8" />
       <module name="java" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
-      <module name="springboot" target="1.8" />
+      <module name="springboot" target="1.5" />
       <module name="springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>

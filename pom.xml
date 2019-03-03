@@ -27,7 +27,8 @@
         <module>hadoop</module>
         <module>hive</module>
         <module>springcloud</module>
-        <module>springboot</module>
+
+        <module>hbase</module>
     </modules>
 
 
