@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eruka" />
         <module name="hadoop" />
         <module name="hbase" />
         <module name="hive" />
@@ -15,9 +16,11 @@
         <module name="springboot" />
         <module name="springboot (1)" />
         <module name="springcloud" />
+        <module name="test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="eruka" target="1.8" />
       <module name="hadoop" target="1.7" />
       <module name="hbase" target="1.8" />
       <module name="hive" target="1.8" />
@@ -28,6 +31,7 @@
       <module name="springboot" target="1.8" />
       <module name="springboot (1)" target="1.8" />
       <module name="springcloud" target="1.8" />
+      <module name="test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
