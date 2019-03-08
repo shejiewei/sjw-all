@@ -29,6 +29,7 @@
         <module>springcloud</module>
         <module>springboot</module>
         <module>hbase</module>
+        <module>rocketmq</module>
     </modules>
 
 

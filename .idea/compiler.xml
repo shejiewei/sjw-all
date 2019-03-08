@@ -12,11 +12,13 @@
         <module name="hive" />
         <module name="java" />
         <module name="netty" />
+        <module name="ribbon" />
+        <module name="rocketmq" />
+        <module name="sc-eureka" />
         <module name="scala" />
         <module name="springboot" />
         <module name="springboot (1)" />
         <module name="springcloud" />
-        <module name="test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +28,9 @@
       <module name="hive" target="1.8" />
       <module name="java" target="1.8" />
       <module name="netty" target="1.8" />
+      <module name="ribbon" target="1.8" />
+      <module name="rocketmq" target="1.8" />
+      <module name="sc-eureka" target="1.8" />
       <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
       <module name="springboot" target="1.8" />
