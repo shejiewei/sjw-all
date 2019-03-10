@@ -14,7 +14,6 @@
       <module fileurl="file://$PROJECT_DIR$/springcloud/sc/sc-eureka.iml" filepath="$PROJECT_DIR$/springcloud/sc/sc-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala/scala.iml" filepath="$PROJECT_DIR$/scala/scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/sjw-all.iml" filepath="$PROJECT_DIR$/sjw-all.iml" />
-      <module fileurl="file://G:\gitbase\sjw-all\springboot\springboot.iml" filepath="G:\gitbase\sjw-all\springboot\springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot (1).iml" filepath="$PROJECT_DIR$/springboot/springboot (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/test.iml" filepath="$PROJECT_DIR$/springcloud/test.iml" />
