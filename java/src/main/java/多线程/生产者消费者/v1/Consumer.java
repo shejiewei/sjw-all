@@ -7,6 +7,7 @@ package 多线程.生产者消费者.v1;
 
 
 import java.util.List;
+import java.util.Queue;
 
 /**
  * 消费者
@@ -15,36 +16,32 @@ import java.util.List;
  *
  */
 
-public class Consumer implements Runnable {
-    private List<PCData> queue;
+public class Consumer implements Runnable{
 
-    public Consumer(List<PCData> queue) {
+    private Queue<Integer> queue;
+    private int maxSize;
+
+    public Consumer(Queue<Integer> queue, int maxSize){
         this.queue = queue;
+        this.maxSize = maxSize;
     }
 
     @Override
     public void run() {
-        try {
-            while (true) {
-                if (Thread.currentThread().isInterrupted())
-                    break;
-                PCData data = null;
-                synchronized (queue) {
-                    if (queue.size() == 0) {
+        while (true){
+            synchronized (queue){
+                while (queue.isEmpty()){
+                    System.out.println("Queue is Empty");
+                    try{
                         queue.wait();
-                        queue.notifyAll();
+                    }catch (InterruptedException ie){
+                        ie.printStackTrace();
                     }
-                    data = queue.remove(0);
                 }
-                System.out.println(
-                        Thread.currentThread().getId() + " 消费了:" + data.get() + " result:" + (data.get() * data.get()));
-                Thread.sleep(1000);
+                int v = queue.remove();
+                System.out.println("Consume " + v);
+                queue.notifyAll();
             }
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
-
     }
-
 }

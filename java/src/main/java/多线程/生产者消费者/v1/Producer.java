@@ -6,7 +6,7 @@ package 多线程.生产者消费者.v1;
 
 
 
-import java.util.List;
+import java.util.Queue;
 import java.util.Random;
 
 /**
@@ -15,40 +15,34 @@ import java.util.Random;
  * @author MacBook
  *
  */
-public class Producer implements Runnable {
-    private List<PCData> queue;
-    private int length;
+public class Producer implements Runnable{
 
-    public Producer(List<PCData> queue, int length) {
+    private Queue<Integer> queue;
+    private int maxSize;
+
+    public Producer(Queue<Integer> queue, int maxSize){
         this.queue = queue;
-        this.length = length;
+        this.maxSize = maxSize;
     }
 
     @Override
     public void run() {
-        try {
-            while (true) {
-
-                if (Thread.currentThread().isInterrupted())
-                    break;
-                Random r = new Random();
-                long temp = r.nextInt(100);
-                System.out.println(Thread.currentThread().getId() + " 生产了：" + temp);
-                PCData data = new PCData();
-                data.set(temp);
-                synchronized (queue) {
-                    if (queue.size() >= length) {
-                        queue.notifyAll();
+        while (true){
+            synchronized (queue){
+                while (queue.size() == maxSize){
+                    try{
+                        System.out.println("Queue is Full");
                         queue.wait();
-                    } else
-                        queue.add(data);
+                    }catch (InterruptedException ie){
+                        ie.printStackTrace();
+                    }
                 }
-                Thread.sleep(1000);
+                Random random = new Random();
+                int i = random.nextInt();
+                System.out.println("Produce " + i);
+                queue.add(i);
+                queue.notifyAll();
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
-
     }
-
 }
