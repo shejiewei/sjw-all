@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: oauth2_test
+server:
+  port: 9090
+management:
+  context_path: /
+security:
+  user:
+    password: 123
+logging:
+  level:
+    # org.springframework.security: DEBUG

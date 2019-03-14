@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/hadoop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/oauth2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud/ribbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud/sc" charset="UTF-8" />
   </component>

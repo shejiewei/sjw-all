@@ -12,12 +12,13 @@
         <module name="hive" />
         <module name="java" />
         <module name="netty" />
+        <module name="oauth2" />
+        <module name="redis" />
         <module name="ribbon" />
         <module name="rocketmq" />
         <module name="sc-eureka" />
         <module name="scala" />
         <module name="springboot" />
-        <module name="springboot (1)" />
         <module name="springcloud" />
       </profile>
     </annotationProcessing>
@@ -28,6 +29,8 @@
       <module name="hive" target="1.8" />
       <module name="java" target="1.8" />
       <module name="netty" target="1.8" />
+      <module name="oauth2" target="1.8" />
+      <module name="redis" target="1.8" />
       <module name="ribbon" target="1.8" />
       <module name="rocketmq" target="1.8" />
       <module name="sc-eureka" target="1.8" />

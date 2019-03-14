@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.security.oauth:spring-security-oauth2:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/unknown/spring-security-oauth2-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/unknown/spring-security-oauth2-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/unknown/spring-security-oauth2-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

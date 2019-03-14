@@ -9,12 +9,14 @@
       <module fileurl="file://$PROJECT_DIR$/hive/hive.iml" filepath="$PROJECT_DIR$/hive/hive.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud/oauth2/oauth2.iml" filepath="$PROJECT_DIR$/springcloud/oauth2/oauth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/ribbon/ribbon.iml" filepath="$PROJECT_DIR$/springcloud/ribbon/ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/rocketmq/rocketmq.iml" filepath="$PROJECT_DIR$/rocketmq/rocketmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/sc/sc-eureka.iml" filepath="$PROJECT_DIR$/springcloud/sc/sc-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala/scala.iml" filepath="$PROJECT_DIR$/scala/scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/sjw-all.iml" filepath="$PROJECT_DIR$/sjw-all.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/springboot (1).iml" filepath="$PROJECT_DIR$/springboot/springboot (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/test.iml" filepath="$PROJECT_DIR$/springcloud/test.iml" />
     </modules>

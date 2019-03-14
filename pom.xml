@@ -30,6 +30,8 @@
         <module>springboot</module>
         <module>hbase</module>
         <module>rocketmq</module>
+        <module>redis</module>
+        <module>springboot</module>
     </modules>
 
 
