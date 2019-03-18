@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanPinDaoIndex" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanadmin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanadmin1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfancloudserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfandordernew" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpayserv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpayserv/src/main/java/com/youfan/service/weixin/WxPayAsyncResponse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpayserv/src/main/java/com/youfan/service/weixin/WxPayRefundResponse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpayserv/src/main/java/com/youfan/service/weixin/WxPaySignature.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpayserv/src/main/java/com/youfan/service/weixin/WxPayUnifiedorderRequest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpayserv/src/main/java/com/youfan/service/weixin/XmlUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpayserve1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanpindaoindex1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanproduct" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanproducttype" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanredisser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanshopmerchant" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/youfanshopuser" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="auditProduct" method="post">
+    <input type="hidden" name="id" th:value="${product.id}"/>
+    商品类别：<span th:text="${product.producttypeid}"></span><br/>
+    商品标题：<span th:text="${product.producttitle}"></span><br/>
+    商品价格：<span th:text="${product.productprice}"></span><br/>
+    商家id：<span th:text="${product.mechartid}"></span><br/>
+    库存：<span th:text="${product.stocknum}"></span><br/>
+    商品图片地址：<span th:text="${product.productpicurl}"></span><br/>
+    商品审核：<input type="radio" name="auditstate" th:value="1"/>审核通过<input type="radio" name="auditstate" th:value="2"/>审核不通过
+    <input type="submit" th:value="提交"/>
+</form>
+</body>
+</html>

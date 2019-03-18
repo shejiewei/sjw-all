@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>商品类别</td>
+        <td>商品标题</td>
+        <td>商品价格</td>
+        <td>商家id</td>
+        <td>库存</td>
+        <td>商品图片地址</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="product: ${list}">
+        <td th:text="${product.producttypeid}"></td>
+        <td th:text="${product.producttitle}"></td>
+        <td th:text="${product.productprice}"></td>
+        <td th:text="${product.mechartid}"></td>
+        <td th:text="${product.stocknum}"></td>
+        <td th:text="${product.productpicurl}"></td>
+        <td ><a href="#" th:href="@{/toupdateProduct(id=${product.id})}">修改</a>|<a  href="#" th:href="@{/deleteProduct(id=${product.id})}">删除</a>|<a  href="#" th:href="@{/viewProduct(id=${product.id})}">查看</a>|<a href="#" th:href="@{/upateProductbyproductstatus(id=${product.id},productstatus=0)}">上架</a>|<a href="#" th:href="@{/upateProductbyproductstatus(id=${product.id},productstatus=1)}">下架</a></td>
+    </tr>
+</table>
+</body>
+</html>

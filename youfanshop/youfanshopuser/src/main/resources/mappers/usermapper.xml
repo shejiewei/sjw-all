@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.youfan.mapper.UserMappper">
+
+    <select id="findUserInfo" resultType="com.youfan.model.User">
+        select name, age,address,telphone,qq,weixin,email,sex,birthday from user;
+    </select>
+
+    <insert id="inseruserInfo" parameterType="com.youfan.model.User">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into user(name,account,age,passwordencrypt,address,telphone,qq,weixin,email,sex,birthday) value(#{name},#{account},#{age},#{passwordencrypt},#{address},#{telphone},#{qq},#{weixin},#{email},#{sex},#{birthday})
+    </insert>
+    <update id="updateUser" parameterType="com.youfan.model.User">
+        update user set name=#{name},age=#{age},address=#{address},qq=#{qq},weixin=#{weixin},email=#{email},sex=#{sex},birthday=#{birthday},account=#{account} where id=#{id}
+    </update>
+    <select id="findByUserid" parameterType="int" resultType="com.youfan.model.User">
+        select * from user where id = #{value}
+    </select>
+
+    <select id="queryuserbyvo" parameterType="com.youfan.vo.UserVo" resultType="com.youfan.model.User">
+        select * from user
+        <where>
+            <include refid="consutoql"></include>
+        </where>
+    </select>
+
+    <sql id="consutoql" >
+        <if test="constomUser != null">
+            <if test="constomUser.name!=null and constomUser.name!=''">
+                and name = "${constomUser.name}"
+            </if>
+            <if test="constomUser.age!=null and constomUser.age!='' ">
+                and age = "${constomUser.age}"
+            </if>
+            <if test="constomUser.address!=null and constomUser.address!='' ">
+                and address = "${constomUser.address}"
+            </if>
+            <if test="constomUser.telphone!=null and constomUser.telphone!='' ">
+                and telphone = "${constomUser.telphone}"
+            </if>
+            <if test="constomUser.qq!=null and constomUser.qq!='' ">
+                and qq = "${constomUser.qq}"
+            </if>
+            <if test="constomUser.weixin!=null and constomUser.weixin!='' ">
+                and weixin = "${constomUser.weixin}"
+            </if>
+            <if test="constomUser.email!=null and constomUser.email!='' ">
+                and email = "${constomUser.email}"
+            </if>
+            <if test="constomUser.sex!=null and constomUser.sex!='' ">
+                and sex = "${constomUser.sex}"
+            </if>
+            <if test="constomUser.birthday!=null and constomUser.birthday!='' ">
+                and birthday = "${constomUser.birthday}"
+            </if>
+            <if test="constomUser.account!=null and constomUser.account!='' ">
+                and account = "${constomUser.account}"
+            </if>
+        </if>
+    </sql>
+    <select id="findByUsername" parameterType="java.lang.String" resultType="com.youfan.model.User">
+        select * from user where name = #{value}
+    </select>
+
+    <delete id="deleteuserbyid" parameterType="int">
+        delete from user where id = #{id}
+    </delete>
+</mapper>

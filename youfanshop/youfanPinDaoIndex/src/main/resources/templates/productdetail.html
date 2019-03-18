@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<div th:include="producttype :: producttype" ></div>
+<table border="1">
+    <tr>
+        <td>商品类别</td>
+        <td>商品标题</td>
+        <td>商品价格</td>
+        <td>商家id</td>
+        <td>库存</td>
+        <td>商品图片地址</td>
+        <td>商品产地</td>
+        <td>商品详情描述</td>
+        <td>商品品牌</td>
+        <td>商品重量</td>
+        <td>商品规格说明和包装</td>
+        <td>商品详情图片地址</td>
+        <td>操作</td>
+    </tr>
+    <tr >
+        <td th:text="${product.producttypeid}"></td>
+        <td th:text="${product.producttitle}"></td>
+        <td th:text="${product.productprice}"></td>
+        <td th:text="${product.mechartid}"></td>
+        <td th:text="${product.stocknum}"></td>
+        <td th:text="${product.productpicurl}"></td>
+        <td th:text="${productDetail.productplace}"></td>
+        <td th:text="${productDetail.productdescription}"></td>
+        <td th:text="${productDetail.productbrand}"></td>
+        <td th:text="${productDetail.productweight}"></td>
+        <td th:text="${productDetail.productspecification}"></td>
+        <td th:text="${productDetail.productdetaipicurl}"></td>
+        <td><a href="#" th:href="@{/tobuy(productid=${product.id},num=1)}">立即购买</a></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="solrtest" />
+        <module name="springserver" />
+        <module name="youfanadmin" />
+        <module name="youfanadmin1" />
+        <module name="youfanCloudServer" />
+        <module name="youfancloudserver" />
+        <module name="youfancommon" />
+        <module name="youfandordernew" />
+        <module name="youfanpayserv" />
+        <module name="youfanpayserve1" />
+        <module name="youfanPinDaoIndex" />
+        <module name="youfanpindaoindex1" />
+        <module name="youfanproduct" />
+        <module name="youfanproducttype" />
+        <module name="youfanredisser" />
+        <module name="youfanshopmerchant" />
+        <module name="youfanshopuser" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="casclient_demo1" target="1.7" />
+      <module name="casclient_demo2" target="1.7" />
+      <module name="solrtest" target="1.5" />
+      <module name="springserver" target="1.8" />
+      <module name="springserver (1)" target="1.8" />
+      <module name="youfanadmin" target="1.8" />
+      <module name="youfanadmin1" target="1.8" />
+      <module name="youfanCloudServer" target="1.8" />
+      <module name="youfancloudserver" target="1.8" />
+      <module name="youfancloudserver (1)" target="1.8" />
+      <module name="youfancommon" target="1.5" />
+      <module name="youfandordernew" target="1.8" />
+      <module name="youfanorder" target="1.8" />
+      <module name="youfanpayserv" target="1.8" />
+      <module name="youfanpayserve1" target="1.8" />
+      <module name="youfanPinDaoIndex" target="1.8" />
+      <module name="youfanpindaoindex1" target="1.8" />
+      <module name="youfanproduct" target="1.8" />
+      <module name="youfanproducttype" target="1.8" />
+      <module name="youfanredisser" target="1.8" />
+      <module name="youfanshop" target="1.5" />
+      <module name="youfanshopmerchant" target="1.8" />
+      <module name="youfanshopuser" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

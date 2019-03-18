@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>地址</td>
+        <td>手机号</td>
+        <td>qq</td>
+        <td>微信</td>
+        <td>邮箱</td>
+        <td>性别</td>
+        <td>生日</td>
+        <td>账号</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="user: ${listuser}">
+        <td th:text="${user.name}">youfan</td>
+        <td th:text="${user.age}">2.41</td>
+        <td th:text="${user.address}">2.41</td>
+        <td th:text="${user.telphone}">2.41</td>
+        <td th:text="${user.qq}">2.41</td>
+        <td th:text="${user.weixin}">2.41</td>
+        <td th:text="${user.email}">2.41</td>
+        <td th:text="${user.sex}">2.41</td>
+        <td th:text="${user.birthday}">2.41</td>
+        <td th:text="${user.account}">2.41</td>
+        <td><a href="#" th:href="@{/findByUserid(id=${user.id})}">查看</a>|<a href="#" th:href="@{/toupdateUser(id=${user.id})}">修改</a>|<a href="#" th:href="@{/deleteuserbyid(id=${user.id})}">删除</a></td>
+    </tr>
+</table>
+</body>
+</html>

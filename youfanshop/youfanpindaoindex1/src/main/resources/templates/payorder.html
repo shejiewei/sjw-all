@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="payOrder" method="post">
+    支付方式：<input type="radio" name="paytype" th:value="1"/>微信
+    <input type="radio" name="paytype" th:value="2"/>支付宝
+    <input type="radio" name="paytype" th:value="3"/>银联
+     <input type="hidden" name="orderid" th:value="${orderid}" />
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

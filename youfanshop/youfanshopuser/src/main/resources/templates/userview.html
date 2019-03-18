@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form >
+    姓名：<span th:text="${user.name}"/><br/>
+    用户名：<span th:text="${user.account}"/><br/>
+    手机号码：<span th:text="${user.telphone}"/><br/>
+    qq：<span th:text="${user.qq}"/><br/>
+    微信：<span th:text="${user.weixin}"/><br/>
+    email:<span th:text="${user.email}"/><br/>
+    地址:<span th:text="${user.address}"/><br/>
+    生日时间：<span th:text="${user.birthday}"/><br/>
+</form>
+</body>
+</html>

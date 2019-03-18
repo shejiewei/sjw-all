@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="upateMechant" method="post">
+    <input name="id" th:value="${mechant.id}" type="hidden" />
+    商家姓名：<span th:text="${mechant.merchantname}"></span><input name="merchantname" type="hidden" th:value="${mechant.merchantname}"/><br/>
+    商家店铺名称：<input name="merchantshopname" th:value="${mechant.merchantshopname}"/><br/>
+    商家账号：<span th:text="${mechant.merchantaccount}"></span><input name="merchantaccount" type="hidden" th:value="${mechant.merchantname}"/><br/>
+    <input name="mechantpassword" th:value="${mechant.mechantpassword}" type="hidden" />
+    <input name="auditstatus" th:value="${mechant.auditstatus}" type="hidden" />
+    商家经营范围：<input name="mechantscope" th:value="${mechant.mechantscope}" /><br/>
+    <input type="submit" value="提交"/><br/>
+</form>
+</body>
+</html>

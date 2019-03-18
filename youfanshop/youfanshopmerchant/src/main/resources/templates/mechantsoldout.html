@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="upatesoldout" method="post">
+    <input name="id" th:value="${mechant.id}" type="hidden" />
+    商家姓名：<span th:text="${mechant.merchantname}"></span><br/>
+    商家店铺名称：<span th:text="${mechant.merchantname}"></span><br/>
+    商家账号：<span th:text="${mechant.merchantname}"></span><br/>
+    商家经营范围：<span th:text="${mechant.mechantscope}"></span><br/>
+    是否下架：<input type="radio" name="status" th:value="2"/>是<input type="radio" name="status" th:value="1"/>否
+    <input type="submit" value="提交"/><br/>
+</form>
+</body>
+</html>

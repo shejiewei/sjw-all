@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<div th:include="producttype :: producttype" ></div>
+<table border="1">
+    <tr>
+        <td>商品类别</td>
+        <td>商品标题</td>
+        <td>商品价格</td>
+        <td>商家id</td>
+        <td>库存</td>
+        <td>商品图片地址</td>
+    </tr>
+    <tr th:each="product: ${produclist}">
+        <td th:text="${product.producttypeid}"></td>
+        <td > <a href="#" th:href="@{/toproductdetail(productytpeid=-1,producid=${product.id})}"><span th:text="${product.producttitle}"></span></a></td>
+        <td th:text="${product.productprice}"></td>
+        <td th:text="${product.mechartid}"></td>
+        <td th:text="${product.stocknum}"></td>
+        <td th:text="${product.productpicurl}"></td>
+    </tr>
+</table>
+</body>
+</html>

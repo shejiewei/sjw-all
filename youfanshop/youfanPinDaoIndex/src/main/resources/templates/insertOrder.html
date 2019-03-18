@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<div th:include="producttype :: producttype" ></div>
+<form action="insertOrder" method="post">
+     <input type="hidden" name="productid" th:value="${product.id}"/>
+    <input type="hidden" name="mechartid" th:value="${product.mechartid}"/>
+     <input type="hidden" name="num" th:value="${num}"/>
+    <input type="hidden" name="payamount" th:value="${totalamount}"/>
+    商品名称：<span th:text="${product.producttitle}"></span><br/>
+    购买数量：<span th:text="${num}"></span><br/>
+    支付金额：<span th:text="${totalamount}"></span><br/>
+    收货人地址：<input name="consigneeadress"/><br/>
+    收货人电话：<input name="consigneephone"/><br/>
+    收货人姓名：<input name="consigneename"/><br/>
+    <input type="submit" value="提交"/><br/>
+</form>
+</body>
+</html>
