@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>支付金额</td>
+        <td>用户id</td>
+        <td>创建时间</td>
+        <td>支付时间</td>
+        <td>支付状态</td>
+        <td>收货人地址</td>
+        <td>收货人电话</td>
+        <td>收货人姓名</td>
+        <td>交易流水号</td>
+        <td>支付类型</td>
+        <td>订单状态</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="order: ${orderlist}">
+        <td th:text="${order.payamount}"> </td>
+        <td th:text="${order.userid}"> </td>
+        <td th:text="${order.createtime}"> </td>
+        <td th:text="${order.paytime}"> </td>
+        <td th:text="${order.paystatus}"> </td>
+        <td th:text="${order.consigneeadress}"> </td>
+        <td th:text="${order.consigneephone}"> </td>
+        <td th:text="${order.consigneename}"> </td>
+        <td th:text="${order.tradenumber}"> </td>
+        <td th:text="${order.paytype}"> </td>
+        <td th:text="${order.orderstatus}"> </td>
+
+        <td><a href="#" th:href="@{/toviewOrder(id=${order.id})}">查看订单详情</a>|<a href="#" th:href="@{/toupdateOrderInfoWithMechart(id=${order.id})}">修改</a>|<a href="#" th:href="@{/deleteorderbyid(id=${order.id})}">删除</a></td>
+    </tr>
+</table>
+</body>
+</html>

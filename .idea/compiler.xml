@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo (1)" />
+        <module name="demo (2)" />
         <module name="eruka" />
         <module name="hadoop" />
         <module name="hbase" />
@@ -18,11 +20,26 @@
         <module name="rocketmq" />
         <module name="sc-eureka" />
         <module name="scala" />
+        <module name="solrtest" />
         <module name="springboot" />
-        <module name="springcloud" />
+        <module name="springserver" />
+        <module name="youfanadmin" />
+        <module name="youfanadmin1" />
+        <module name="youfancloudserver" />
+        <module name="YoufanCommon" />
+        <module name="youfandordernew" />
+        <module name="youfanpayserv" />
+        <module name="youfanpayserve1" />
+        <module name="youfanproduct" />
+        <module name="youfanproducttype" />
+        <module name="youfanredisser" />
+        <module name="youfanshopmerchant" />
+        <module name="youfanshopuser" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo (1)" target="1.8" />
+      <module name="demo (2)" target="1.8" />
       <module name="eruka" target="1.8" />
       <module name="hadoop" target="1.7" />
       <module name="hbase" target="1.8" />
@@ -36,10 +53,25 @@
       <module name="sc-eureka" target="1.8" />
       <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
+      <module name="solrtest" target="1.5" />
       <module name="springboot" target="1.8" />
       <module name="springboot (1)" target="1.8" />
       <module name="springcloud" target="1.8" />
+      <module name="springserver" target="1.8" />
       <module name="test" target="1.8" />
+      <module name="youfanadmin" target="1.8" />
+      <module name="youfanadmin1" target="1.8" />
+      <module name="youfancloudserver" target="1.8" />
+      <module name="YoufanCommon" target="1.5" />
+      <module name="youfandordernew" target="1.8" />
+      <module name="youfanpayserv" target="1.8" />
+      <module name="youfanpayserve1" target="1.8" />
+      <module name="youfanproduct" target="1.8" />
+      <module name="youfanproducttype" target="1.8" />
+      <module name="youfanredisser" target="1.8" />
+      <module name="youfanshop" target="1.5" />
+      <module name="youfanshopmerchant" target="1.8" />
+      <module name="youfanshopuser" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+
+<form action="updateOrderInfo" method="post">
+    <input type="hidden" th:name="id" th:value="${order.id}"/>
+    支付金额：<span th:text="${order.payamount}"></span><br/>
+    收货人地址：<input name="consigneeadress" th:value="${order.consigneeadress}"/><br/>
+    收货人电话：<input name="consigneephone" th:value="${order.consigneephone}"/><br/>
+    收货人姓名：<input name="consigneename" th:value="${order.consigneename}"/><br/>
+    <input type="submit" value="提交"/><br/>
+</form>
+</body>
+</html>

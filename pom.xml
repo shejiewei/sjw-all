@@ -32,6 +32,7 @@
         <module>rocketmq</module>
         <module>redis</module>
         <module>springboot</module>
+        <module>youfanshop</module>
     </modules>
 
 

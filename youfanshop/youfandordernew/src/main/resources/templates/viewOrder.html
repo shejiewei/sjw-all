@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+    支付金额：<span th:text="${order.payamount}"></span><br/>
+    用户id：<span th:text="${order.userid}"></span><br/>
+    收货人地址：<span th:text="${order.consigneeadress}"></span><br/>
+    收货人电话：<span th:text="${order.consigneephone}"></span><br/>
+    收货人姓名：<span th:text="${order.consigneename}"></span><br/>
+    订单生成时间：<span th:text="${order.createtime}"></span><br/>
+    支付时间：<span th:text="${order.paytime}"></span><br/>
+    支付状态：<span th:text="${order.paystatus}"></span><br/>
+    交易流水号：<span th:text="${order.tradenumber}"></span><br/>
+    支付类型：<span th:text="${order.paytype}"></span><br/>
+    订单状态：<span th:text="${order.orderstatus}"></span><br/>
+</body>
+</html>
