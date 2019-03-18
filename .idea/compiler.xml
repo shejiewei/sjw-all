@@ -15,11 +15,13 @@
         <module name="java" />
         <module name="netty" />
         <module name="oauth2" />
+        <module name="rabbitmqspringboot" />
         <module name="redis" />
         <module name="ribbon" />
         <module name="rocketmq" />
         <module name="sc-eureka" />
         <module name="scala" />
+        <module name="sjwrabbitmqserv" />
         <module name="solrtest" />
         <module name="springboot" />
         <module name="springserver" />
@@ -38,6 +40,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="1" target="1.8" />
       <module name="demo (1)" target="1.8" />
       <module name="demo (2)" target="1.8" />
       <module name="eruka" target="1.8" />
@@ -47,12 +50,15 @@
       <module name="java" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="oauth2" target="1.8" />
+      <module name="rabbitmq" target="1.8" />
+      <module name="rabbitmqspringboot" target="1.8" />
       <module name="redis" target="1.8" />
       <module name="ribbon" target="1.8" />
       <module name="rocketmq" target="1.8" />
       <module name="sc-eureka" target="1.8" />
       <module name="scala" target="1.8" />
       <module name="sjw-all" target="1.8" />
+      <module name="sjwrabbitmqserv" target="1.8" />
       <module name="solrtest" target="1.5" />
       <module name="springboot" target="1.8" />
       <module name="springboot (1)" target="1.8" />

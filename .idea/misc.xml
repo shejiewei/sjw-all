@@ -22,6 +22,8 @@
         <option value="$PROJECT_DIR$/youfanshop/youfanshopmerchant/pom.xml" />
         <option value="$PROJECT_DIR$/youfanshop/youfanshopuser/pom.xml" />
         <option value="$PROJECT_DIR$/youfanshop/springserver/pom.xml" />
+        <option value="$PROJECT_DIR$/youfanshop/sjwrabbitmqserv/pom.xml" />
+        <option value="$PROJECT_DIR$/youfanshop/youfancommon/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
