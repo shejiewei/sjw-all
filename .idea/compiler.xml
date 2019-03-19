@@ -23,7 +23,6 @@
         <module name="scala" />
         <module name="sjwrabbitmqserv" />
         <module name="solrtest" />
-        <module name="springboot" />
         <module name="springserver" />
         <module name="youfanadmin" />
         <module name="youfanadmin1" />
