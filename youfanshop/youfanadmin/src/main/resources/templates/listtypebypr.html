@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>商品类别名称</td>
+    </tr>
+    <tr th:each="productype: ${productypelist}">
+        <td ><a href="#" th:href="@{/listProduct(producttypeid=${productype.id})}"><span th:text="${productype.producttypename}"></span></a></td>
+    </tr>
+</table>
+</body>
+</html>

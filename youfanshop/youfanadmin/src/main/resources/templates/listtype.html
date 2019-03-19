@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="toinsertProducttype">添加</a>
+<table border="1">
+    <tr>
+        <td>商品类别名称</td>
+        <td>商品类别描述</td>
+        <td>类别等级</td>
+        <td>父节点</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="productype: ${productypelist}">
+        <td th:text="${productype.producttypename}">youfan</td>
+        <td th:text="${productype.producttypedescription}">2.41</td>
+        <td th:text="${productype.typegrade}">2.41</td>
+        <td th:text="${productype.parentid}">2.41</td>
+        <td><a href="#" th:href="@{/findProductytpeByid(id=${productype.id})}">查看</a>|<a href="#" th:href="@{/toupdateProductytpeByid(id=${productype.id})}">修改</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

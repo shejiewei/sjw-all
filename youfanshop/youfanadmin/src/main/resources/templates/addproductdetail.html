@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="addproductdetail" method="post">
+    <input type="hidden" name="proudctid" th:value="${id}" />
+    商品产地：<input type="text" name="productplace"/>
+    商品详情描述：<input type="text" name="productdescription"/>
+    商品品牌：<input type="text" name="productbrand"/>
+    商品重量：<input type="text" name="productweight"/>
+    商品规格说明和包装：<input type="text" name="productspecification"/>
+    商品详情图片地址：<input type="text" name="productdetaipicurl"/>
+    <input type="submit" th:value="提交"/>
+</form>
+</body>
+</html>

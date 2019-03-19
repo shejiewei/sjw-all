@@ -1,0 +1,59 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Basic Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="/js/jquery-easyui-1.5.5.3/themes/default/easyui.css"/>
+	<link rel="stylesheet" type="text/css" href="/js/jquery-easyui-1.5.5.3/themes/icon.css"/>
+	<link rel="stylesheet" type="text/css" href="/js/jquery-easyui-1.5.5.3/demo.css"/>
+	<script type="text/javascript" src="/js/jquery-easyui-1.5.5.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-easyui-1.5.5.3/jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px">友凡商城后台管理系统</div>
+	<div data-options="region:'west',split:true,title:'菜单'" style="width:150px;padding:10px;">
+		<ul class="easyui-tree">
+        <li>
+            <span>后台管理系统</span>
+            <ul>
+                <li>
+                    <span>用户服务</span>
+                    <ul>
+                        <li><span><a href="javascript:void();" onclick="userlist()">用户列表</a></span></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span>商品服务</span>
+                    <ul>
+                         <li><span><a href="javascript:void();" onclick="producttypeurl()">商品类别列表</a></span></li>
+                        <li><span><a href="javascript:void();" onclick="producturl()">商品列表</a></span></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+        </ul>
+	</div>
+	<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">友凡出品，盗版必究</div>
+	<div data-options="region:'center',title:'查询结果'"><iframe id="pageurl" style="width: 100%; height: 100%;display:none" frameborder='0'></iframe> </div>
+</body>
+<script type="text/javascript">
+function userlist(){
+	$('#pageurl').attr("src","http://127.0.0.1:8088/listuser");
+    $('#pageurl').show();  
+}
+function producttypeurl(){
+	$('#pageurl').attr("src","http://127.0.0.1:8088/listproducttype");
+    $('#pageurl').show();  
+}
+function producturl(){
+	$('#pageurl').attr("src","http://127.0.0.1:8088/listproducttypebypr");
+    $('#pageurl').show();  
+}
+function activeuserurl(){
+	$('#pageurl').attr("src","http://127.0.0.1:8080/ViewService/errorinfoAction/activeuserlist");  
+    $('#pageurl').show();  
+}
+</script>
+</html>

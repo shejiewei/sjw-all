@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="insertProduct" method="post">
+    商品类别：<input type="text" name="producttypeid"/><br/>
+    商品标题：<input type="text" name="producttitle"/><br/>
+    商品价格：<input type="text" name="productprice"/><br/>
+    商家id：<input type="text" name="mechartid"/><br/>
+    库存：<input type="text" name="stocknum"/><br/>
+    商品图片地址：<input type="text" name="productpicurl"/><br/>
+    <input type="submit" th:value="提交"/>
+</form>
+</body>
+</html>

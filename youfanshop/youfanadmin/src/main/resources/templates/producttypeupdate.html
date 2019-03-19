@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<form action="updateProductytpeByid" method="post">
+    <input th:value="${productType.id}" type="hidden" name="id"/>
+    产品类别名称：<input type="text" name="producttypename" th:value="${productType.producttypename}"/>
+    产品类别描述：<input type="text" name="producttypedescription" th:value="${productType.producttypedescription}"/>
+    <input type="submit" th:value="提交"/>
+</form>
+</body>
+</html>
