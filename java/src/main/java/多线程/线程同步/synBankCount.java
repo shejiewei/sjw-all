@@ -5,7 +5,7 @@ package 多线程.线程同步;
  */
 public class synBankCount {
 
-//同步方法块
+//同步方法块 使用synchronized关键字来修饰static方法，此时调用该方法将会锁住整个类。
     private int count=0;
 
     public synchronized void addMoney(int money){
