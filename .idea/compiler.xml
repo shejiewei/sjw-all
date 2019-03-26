@@ -15,7 +15,6 @@
         <module name="java" />
         <module name="netty" />
         <module name="oauth2" />
-        <module name="rabbitmqspringboot" />
         <module name="redis" />
         <module name="ribbon" />
         <module name="rocketmq" />
@@ -23,6 +22,8 @@
         <module name="scala" />
         <module name="sjwrabbitmqserv" />
         <module name="solrtest" />
+        <module name="sp-security" />
+        <module name="springbootsecurity1" />
         <module name="springserver" />
         <module name="youfanadmin" />
         <module name="youfanadmin1" />
@@ -34,6 +35,7 @@
         <module name="youfanproduct" />
         <module name="youfanproducttype" />
         <module name="youfanredisser" />
+        <module name="youfanshop" />
         <module name="youfanshopmerchant" />
         <module name="youfanshopuser" />
       </profile>
@@ -59,8 +61,11 @@
       <module name="sjw-all" target="1.8" />
       <module name="sjwrabbitmqserv" target="1.8" />
       <module name="solrtest" target="1.5" />
+      <module name="sp-security" target="1.8" />
       <module name="springboot" target="1.8" />
       <module name="springboot (1)" target="1.8" />
+      <module name="springbootsecurity" target="1.8" />
+      <module name="springbootsecurity1" target="1.8" />
       <module name="springcloud" target="1.8" />
       <module name="springserver" target="1.8" />
       <module name="test" target="1.8" />
@@ -74,7 +79,7 @@
       <module name="youfanproduct" target="1.8" />
       <module name="youfanproducttype" target="1.8" />
       <module name="youfanredisser" target="1.8" />
-      <module name="youfanshop" target="1.5" />
+      <module name="youfanshop" target="1.8" />
       <module name="youfanshopmerchant" target="1.8" />
       <module name="youfanshopuser" target="1.8" />
     </bytecodeTargetLevel>

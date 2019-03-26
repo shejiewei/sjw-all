@@ -13,7 +13,6 @@
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/oauth2/oauth2.iml" filepath="$PROJECT_DIR$/springcloud/oauth2/oauth2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/rabbitmqspringboot.iml" filepath="$PROJECT_DIR$/youfanshop/rabbitmqspringboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/ribbon/ribbon.iml" filepath="$PROJECT_DIR$/springcloud/ribbon/ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/rocketmq/rocketmq.iml" filepath="$PROJECT_DIR$/rocketmq/rocketmq.iml" />
@@ -22,6 +21,8 @@
       <module fileurl="file://$PROJECT_DIR$/sjw-all.iml" filepath="$PROJECT_DIR$/sjw-all.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/sjwrabbitmqserv/sjwrabbitmqserv.iml" filepath="$PROJECT_DIR$/youfanshop/sjwrabbitmqserv/sjwrabbitmqserv.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/solrtest/solrtest.iml" filepath="$PROJECT_DIR$/youfanshop/solrtest/solrtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/sp-security/sp-security.iml" filepath="$PROJECT_DIR$/springboot/sp-security/sp-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/springserver/springserver.iml" filepath="$PROJECT_DIR$/youfanshop/springserver/springserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/test.iml" filepath="$PROJECT_DIR$/springcloud/test.iml" />

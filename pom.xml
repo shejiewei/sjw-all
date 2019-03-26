@@ -33,6 +33,7 @@
         <module>redis</module>
         <module>springboot</module>
         <module>youfanshop</module>
+        <module>springboot</module>
     </modules>
 
 
