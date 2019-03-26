@@ -26,7 +26,6 @@
         <module name="springbootsecurity1" />
         <module name="springserver" />
         <module name="youfanadmin" />
-        <module name="youfanadmin1" />
         <module name="youfancloudserver" />
         <module name="YoufanCommon" />
         <module name="youfandordernew" />
