@@ -54,7 +54,7 @@ public class  HdfsApi {
     // 创建hdfs目录
     @Test
     public void createDir() throws IOException {
-        String dir = "/test3/";
+        String dir = "/test4/";
         Path path = new Path(dir);
         if (hdfs.exists(path)) {
             System.out.println("dir \t" + conf.get("fs.default.name") + dir

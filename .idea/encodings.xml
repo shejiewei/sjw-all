@@ -2,9 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/hadoop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot/sp-oauth2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot/sp-security" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot/springbootsecurity" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot/springbootsecurity" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud/oauth2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud/ribbon" charset="UTF-8" />
@@ -14,7 +13,6 @@
     <file url="file://$PROJECT_DIR$/youfanshop/springserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/youfanshop/youfanPinDaoIndex" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/youfanshop/youfanadmin" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/youfanshop/youfanadmin1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/youfanshop/youfancloudserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/youfanshop/youfandordernew" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/youfanshop/youfanpayserv" charset="UTF-8" />

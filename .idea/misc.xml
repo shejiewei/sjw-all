@@ -6,25 +6,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud/oauth2/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanadmin/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfancloudserver/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfandordernew/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanpayserv/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanpayserve1/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanPinDaoIndex/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanpindaoindex1/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanproduct/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanproducttype/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanredisser/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanshopmerchant/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfanshopuser/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/springserver/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/sjwrabbitmqserv/pom.xml" />
-        <option value="$PROJECT_DIR$/youfanshop/youfancommon/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/springbootsecurity/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/springbootsecurity1/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot/sp-security/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
