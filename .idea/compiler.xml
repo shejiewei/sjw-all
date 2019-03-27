@@ -24,6 +24,7 @@
         <module name="sjwrabbitmqserv" />
         <module name="solrtest" />
         <module name="sp-security" />
+        <module name="spark" />
         <module name="springbootsecurity1" />
         <module name="springserver" />
         <module name="youfanadmin" />
@@ -62,6 +63,7 @@
       <module name="sjwrabbitmqserv" target="1.8" />
       <module name="solrtest" target="1.5" />
       <module name="sp-security" target="1.8" />
+      <module name="spark" target="1.8" />
       <module name="springboot" target="1.8" />
       <module name="springboot (1)" target="1.8" />
       <module name="springbootsecurity" target="1.8" />
