@@ -15,6 +15,7 @@
         <module name="java" />
         <module name="netty" />
         <module name="oauth2" />
+        <module name="rabbitmqspringboot" />
         <module name="redis" />
         <module name="ribbon" />
         <module name="rocketmq" />
