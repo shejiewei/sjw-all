@@ -6,39 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo (1)" />
-        <module name="demo (2)" />
         <module name="eruka" />
         <module name="hadoop" />
         <module name="hbase" />
         <module name="hive" />
         <module name="java" />
         <module name="netty" />
-        <module name="oauth2" />
         <module name="rabbitmqspringboot" />
         <module name="redis" />
         <module name="ribbon" />
         <module name="rocketmq" />
         <module name="sc-eureka" />
         <module name="scala" />
-        <module name="sjwrabbitmqserv" />
-        <module name="solrtest" />
-        <module name="sp-security" />
         <module name="spark" />
         <module name="springbootsecurity1" />
-        <module name="springserver" />
-        <module name="youfanadmin" />
-        <module name="youfancloudserver" />
-        <module name="YoufanCommon" />
-        <module name="youfandordernew" />
-        <module name="youfanpayserv" />
-        <module name="youfanpayserve1" />
-        <module name="youfanproduct" />
-        <module name="youfanproducttype" />
-        <module name="youfanredisser" />
         <module name="youfanshop" />
-        <module name="youfanshopmerchant" />
-        <module name="youfanshopuser" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
