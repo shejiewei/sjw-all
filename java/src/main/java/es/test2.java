@@ -16,6 +16,9 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentFactory;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.reindex.BulkByScrollResponse;
+import org.elasticsearch.index.reindex.DeleteByQueryAction;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.junit.Assert;
 import org.junit.Before;
@@ -135,6 +138,20 @@ public class test2 {
        System.out.println(response.status());
 
    }
+    @Test
+     public void test6(){
+
+     BulkByScrollResponse response= DeleteByQueryAction.INSTANCE
+                .newRequestBuilder(client)
+                .filter(QueryBuilders.matchQuery("title","地方"))
+                .source("index1")
+                .get();
+        long counts = response.getDeleted();
+        System.out.println(counts);
+
+
+    }
+
 
 
 }
