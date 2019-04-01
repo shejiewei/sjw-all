@@ -9,6 +9,7 @@ import org.elasticsearch.action.get.MultiGetItemResponse;
 import org.elasticsearch.action.get.MultiGetResponse;
 import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.transport.TransportClient;
@@ -16,9 +17,14 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentFactory;
+import org.elasticsearch.index.query.MatchAllQueryBuilder;
+import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.TermQueryBuilder;
 import org.elasticsearch.index.reindex.BulkByScrollResponse;
 import org.elasticsearch.index.reindex.DeleteByQueryAction;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.junit.Assert;
 import org.junit.Before;
@@ -27,6 +33,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -151,7 +158,62 @@ public class test2 {
 
 
     }
+    @Test
+    public void test7(){
+        MatchAllQueryBuilder qb = QueryBuilders.matchAllQuery();
+
+        SearchResponse sr= client.prepareSearch("lib3")
+               .setQuery(qb)
+                .setSize(3).get();
+        SearchHits hits= sr.getHits();
+        for (SearchHit hit:hits){
+            System.out.println(hit.getSourceAsString());
+            Map<String, Object> map = hit.getSourceAsMap();
+            for (String key:map.keySet()){
+                System.out.println(key+"="+map.get(key));
+            }
+
+        }
 
 
+    }
+
+    @Test
+    public void test8(){
+
+        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", "发");
+        SearchResponse response = client.prepareSearch("lib3")
+                .setQuery(matchQueryBuilder).setSize(3).get();
+
+        SearchHits hits= response.getHits();
+        for (SearchHit hit:hits){
+            System.out.println(hit.getSourceAsString());
+            Map<String, Object> map = hit.getSourceAsMap();
+            for (String key:map.keySet()){
+                System.out.println(key+"="+map.get(key));
+            }
+
+        }
+
+
+    }
+
+    @Test
+    public void test9(){
+        TermQueryBuilder bu = QueryBuilders.termQuery("age", "40");
+        SearchResponse response = client.prepareSearch("lib3")
+                .setQuery(bu)
+                .setSize(2).get();
+        SearchHits hits= response.getHits();
+        for (SearchHit hit:hits){
+            System.out.println(hit.getSourceAsString());
+            Map<String, Object> map = hit.getSourceAsMap();
+            for (String key:map.keySet()){
+                System.out.println(key+"="+map.get(key));
+            }
+
+        }
+
+    }
 
 }
