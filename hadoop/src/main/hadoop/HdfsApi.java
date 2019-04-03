@@ -27,13 +27,13 @@ public class  HdfsApi {
             ugi.doAs(new PrivilegedExceptionAction<Void>() {
                 public Void run() throws Exception {
                     Configuration conf = new Configuration();
-//"hdfs://lyz01:9000/"对应的是你自己的网址
-                    conf.set("fs.default.name", "hdfs://192.168.93.131:8020/");
+          //"hdfs://lyz01:9000/"对应的是你自己的网址
+                    conf.set("fs.default.name", "hdfs://192.168.2.45:8020/");
                     //conf.set("hadoop.job.ugi", "root");
                     //以下两行是支持 hdfs的追加 功能的：hdfs.append()
                     conf.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
                     conf.set("dfs.client.block.write.replace-datanode-on-failure.enable", "true");
-                    Path path = new Path("hdfs://192.168.93.131:8020/");
+                    Path path = new Path("hdfs://192.168.2.45:8020/");
                     //如果在本地测试，需要使用此种方法获取文件系统
                     hdfs = FileSystem.get(path.toUri(), conf);
                     //hdfs = path.getFileSystem(conf); // 这个也可以
@@ -54,7 +54,7 @@ public class  HdfsApi {
     // 创建hdfs目录
     @Test
     public void createDir() throws IOException {
-        String dir = "/test4/";
+        String dir = "/test/";
         Path path = new Path(dir);
         if (hdfs.exists(path)) {
             System.out.println("dir \t" + conf.get("fs.default.name") + dir
@@ -174,7 +174,7 @@ public class  HdfsApi {
             System.out.println("Error : the HDFS file: \t" + hdfsDst + "\t not exists.");
         }else{
             //HDFS下载文件到本地
-            hdfs.copyToLocalFile(false,dst,src,true);
+         //   hdfs.copyToLocalFile(false,dst,src,true);
             System.out.println("successful ：download successful! please look at: \t" + localSrc);
         }
     }
