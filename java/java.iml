@@ -81,6 +81,17 @@
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:parent-join-client:6.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:rank-eval-client:6.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.client:x-pack-transport:5.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.elasticsearch.plugin:x-pack-api:5.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.elasticsearch.plugin:transport-netty3-client:5.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty:3.10.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.unboundid:unboundid-ldapsdk:3.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.55" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.55" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:r239" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.elasticsearch.client:rest:5.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.elasticsearch.client:sniffer:5.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.47" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:7.0.0-beta3" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.72" level="project" />
