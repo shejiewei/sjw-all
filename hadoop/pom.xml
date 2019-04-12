@@ -46,6 +46,11 @@
             <artifactId>hadoop-common</artifactId>
             <version>2.7.2</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
 
         <!--<dependency>
             <groupId>redis.clients</groupId>

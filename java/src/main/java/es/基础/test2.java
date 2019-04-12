@@ -1,13 +1,11 @@
-package es;
+package es.基础;
 
 
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
-import org.elasticsearch.action.get.GetRequestBuilder;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.get.MultiGetItemResponse;
 import org.elasticsearch.action.get.MultiGetResponse;
-import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.update.UpdateRequest;
@@ -26,7 +24,6 @@ import org.elasticsearch.index.reindex.DeleteByQueryAction;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -49,7 +46,7 @@ public class test2 {
 
         Settings setting=  Settings.builder().put("cluster.name","my-application").build();
 
-        client= new PreBuiltTransportClient(setting).addTransportAddress(new TransportAddress(InetAddress.getByName("192.168.93.6"),9300));
+        client= new PreBuiltTransportClient(setting).addTransportAddress(new TransportAddress(InetAddress.getByName("192.168.2.45"),9300));
 
 
     }
