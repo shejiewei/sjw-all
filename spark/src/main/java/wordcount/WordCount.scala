@@ -2,6 +2,7 @@ package wordcount
 
 import org.apache.spark.{SparkConf, SparkContext}
 
+
 /**
   * Created by shejiewei on 2019/3/27.
   */
@@ -17,6 +18,8 @@ object WordCount {
 
      wordCounts.foreach(wordcount=>println(wordcount._1+"appeared"+wordcount._2));
 
+    sc.stop();
+  //spark-submit --class wordcount.WordCount --master local[2] /data/spark-1.0-SNAPSHOT.jar
 
   }
 
