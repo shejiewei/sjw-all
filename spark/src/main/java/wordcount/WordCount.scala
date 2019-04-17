@@ -13,7 +13,7 @@ object WordCount {
     val conf=new SparkConf().setAppName("WordCount").setMaster("local[2]");
     val sc=new SparkContext(conf);
 
-    val lines=sc.textFile("hdfs://192.168.93.131:8020/word.txt");
+    val lines=sc.textFile("hdfs://192.168.93.128:8020/data/word.txt");
     val wordCounts= lines.flatMap(line=>line.split(" ")).map(word=>(word,1)).reduceByKey(_+_);
 
      wordCounts.foreach(wordcount=>println(wordcount._1+"appeared"+wordcount._2));
