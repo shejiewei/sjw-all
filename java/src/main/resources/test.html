@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+
+    var now = new Date();
+    //writeToLog(now);
+    document.write(now);
+    debugger;
+    var dateTime = dateAdd(now,"hh",-8);	//国际时间
+    var pre5MinTime = dateAdd(dateTime, "mi", 0-delay);	//过去5分钟时间
+    var min = pre5MinTime.getMinutes()/delay;	//获取整数数值
+    var hour = pre5MinTime.getHours();	//获取小时
+    var minTime = trunc(min)*delay;	//获取小时内5分钟的倍数
+    pre5MinTime.setMinutes(minTime);
+    var s_ymdhms = date2str(dateAdd(pre5MinTime,"mi",-statisticsMin),"yyyyMMddHHmm") + "00";
+    var e_ymdhms = date2str(pre5MinTime,"yyyyMMddHHmm") + "00";
+    dateTime = e_ymdhms;
+    //拼接所需的url
+    var url = "http://" + dns + "/di/http.action?userId=" + userId + "&pwd=" + pwd + "&interfaceId=" + interfaceId + "&dataFormat=" + dataFormat + "&prov=" + prov +"&s_ymdhms=" + s_ymdhms + "&e_ymdhms=" + e_ymdhms;
+    writeToLog(url);
+    document.write("Hello World!")
+    //alert("test");
+</script>
+<body>
+
+</body>
+</html>

@@ -14,7 +14,7 @@ object SQLContextApp {
     val sc=new SparkContext(sparkConf)
     val sQLContext=  new SQLContext(sc);
 
-    val word= sQLContext.read.format("json").load("hdfs://192.168.93.131:8020/word.txt");
+    val word= sQLContext.read.format("json").load("hdfs://192.168.93.128:8020/word.txt");
     word.printSchema();
 
     word.show();
