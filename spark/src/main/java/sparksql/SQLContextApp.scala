@@ -16,7 +16,9 @@ object SQLContextApp {
 
     val word= sQLContext.read.format("json").load("hdfs://192.168.93.131:8020/word.txt");
     word.printSchema();
+
     word.show();
+
 
     sc.stop();
 
