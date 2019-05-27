@@ -18,7 +18,7 @@ object sqlcontext {
 
     case class Person(name:String,age:Int)
 
-    val people=sc.textFile("hdfs://192.168.93.128:8020/data/people.txt").map(_.split(",")).map(p=>Person(p(0),p(1).trim.toInt)).toDF()
+    val people=sc.textFile("hdfs://192.168.93.128:8020/data/people.txt").map(_.split(",")).map(p=>Person(p(0),p(1).trim.toInt))
   //  people.registerTempTable("people")
 
     val teenagers=sqlcontext.sql("select name,age from people where age >=10")

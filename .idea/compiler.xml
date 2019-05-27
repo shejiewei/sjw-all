@@ -18,6 +18,8 @@
         <module name="rocketmq" />
         <module name="sc-eureka" />
         <module name="scala" />
+        <module name="sp-oauth2" />
+        <module name="sp-security" />
         <module name="spark" />
         <module name="springbootsecurity1" />
         <module name="youfanshop" />
@@ -44,6 +46,7 @@
       <module name="sjw-all" target="1.8" />
       <module name="sjwrabbitmqserv" target="1.8" />
       <module name="solrtest" target="1.5" />
+      <module name="sp-oauth2" target="1.8" />
       <module name="sp-security" target="1.8" />
       <module name="spark" target="1.8" />
       <module name="springboot" target="1.8" />
