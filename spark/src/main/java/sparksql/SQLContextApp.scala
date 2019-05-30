@@ -20,6 +20,7 @@ object SQLContextApp {
     word.show();
 
 
+
     sc.stop();
 
   }
