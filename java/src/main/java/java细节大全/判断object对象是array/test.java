@@ -1,8 +1,5 @@
 package java细节大全.判断object对象是array;
 
-import org.apache.solr.client.solrj.SolrClient;
-import org.apache.solr.client.solrj.impl.HttpSolrClient;
-
 import java.lang.reflect.Array;
 
 /**
@@ -31,7 +28,7 @@ public class test {
         Object test1 = new Integer[]{1,2,3,4,5,6,8,9};
         // Object test1=new ArrayList<>();
          Object num=1;
-         SolrClient solr = new HttpSolrClient(urlString);
+        // SolrClient solr = new HttpSolrClient(urlString);
          if (num.getClass().isEnum())
          {
              System.out.println(num+"is num");
