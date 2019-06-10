@@ -12,6 +12,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="scala-sdk-2.11.4" level="application" />
+<<<<<<< Updated upstream
+=======
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.7" level="project" />
+>>>>>>> Stashed changes
     <orderEntry type="library" name="scala-sdk-2.10.4" level="application" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-core_2.11:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.avro:avro-mapred:hadoop2:1.7.7" level="project" />
@@ -219,10 +225,13 @@
     <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.6.0" level="project" />
+<<<<<<< Updated upstream
     <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.scalatest:scalatest_2.11:3.1.0-SNAP10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.scalactic:scalactic_2.11:3.1.0-SNAP10" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.12" level="project" />
+=======
+>>>>>>> Stashed changes
   </component>
 </module>
