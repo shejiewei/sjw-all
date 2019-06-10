@@ -13,6 +13,7 @@ public enum DataTypeEnums {
     private String niceName;
     private int code;
 
+
     private DataTypeEnums(String s, int code) {
         this.niceName = s;
         this.code = code;
