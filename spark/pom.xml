@@ -49,6 +49,20 @@
            <artifactId>hive-jdbc</artifactId>
            <version>1.2.1.spark2</version>
        </dependency>
+       <dependency>
+           <groupId>org.scala-lang</groupId>
+           <artifactId>scala-library</artifactId>
+           <version>2.11.11</version>
+       </dependency>
+
+       <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+       <dependency>
+           <groupId>org.scalatest</groupId>
+           <artifactId>scalatest_2.11</artifactId>
+           <version>3.1.0-SNAP10</version>
+           <scope>test</scope>
+       </dependency>
+
    </dependencies>
 
     <build>
@@ -56,6 +70,34 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.8.1</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.scalatest</groupId>
+                <artifactId>scalatest-maven-plugin</artifactId>
+                <version>1.0</version>
+                <configuration>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <junitxml>.</junitxml>
+                    <filereports>WDF TestResult.txt</filereports>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

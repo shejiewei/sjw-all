@@ -16,6 +16,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.elasticsearch.plugin:x-pack-api:5.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.elasticsearch.plugin:transport-netty3-client:5.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty:3.10.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.unboundid:unboundid-ldapsdk:3.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:r239" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.elasticsearch.client:rest:5.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.elasticsearch.client:sniffer:5.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:25.1-android" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.checkerframework:checker-compat-qual:2.0.0" level="project" />
@@ -69,6 +77,8 @@
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.9.1" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:reindex-client:6.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.client:elasticsearch-rest-client:6.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpasyncclient:4.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore-nio:4.4.5" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.10" level="project" />
@@ -79,31 +89,8 @@
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:parent-join-client:6.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:rank-eval-client:6.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.client:x-pack-transport:5.1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.elasticsearch.plugin:x-pack-api:5.1.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.elasticsearch.plugin:transport-netty3-client:5.1.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty:3.10.6.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.unboundid:unboundid-ldapsdk:3.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.55" level="project" />
-    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.55" level="project" />
-    <orderEntry type="library" name="Maven: com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:r239" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.3" level="project" />
-    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.elasticsearch.client:rest:5.1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.elasticsearch.client:sniffer:5.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.47" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:7.0.0-beta4" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.72" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.solr:solr-solrj:7.4.0" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-math3:3.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.6" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.11" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.4.1" level="project" />
-    <orderEntry type="library" name="Maven: org.noggit:noggit:0.8" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.24" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.24" level="project" />
   </component>
 </module>
