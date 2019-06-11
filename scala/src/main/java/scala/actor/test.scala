@@ -1,5 +1,6 @@
 package scala.actor
 
+/*
 import akka.actor.{ActorSystem, Props}
 
 /**
@@ -17,3 +18,4 @@ object test {
     system.shutdown()
   }
 }
+*/

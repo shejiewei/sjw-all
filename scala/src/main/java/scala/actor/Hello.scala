@@ -1,5 +1,6 @@
 package scala.actor
 
+/*
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
 
@@ -26,3 +27,4 @@ object Main extends App{
   system.shutdown()
 
 }
+*/
