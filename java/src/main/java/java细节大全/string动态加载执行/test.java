@@ -36,6 +36,12 @@ public class test {
                  map.put("alive", "coding every day");
                  map.put("out", System.out);
                  String expression = "out.print(alive)";
+                 int a=10;
+                 String test="if(a>0) System.out.println(a)";
+
+
+
+
                //  executeExpression(expression, map);
                  // ReflectUtils.executeExpression(expression, map);
 
