@@ -3,11 +3,6 @@ package java.wordcount;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.api.java.function.FlatMapFunction;
-
-
-import java.util.Arrays;
-import java.util.Iterator;
 
 /**
  * Created by shejiewei on 2019/3/27.
