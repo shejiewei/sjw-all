@@ -12,11 +12,12 @@ object WordCount {
 
     val conf=new SparkConf().setAppName("WordCount").setMaster("local[2]");
     val sc=new SparkContext(conf);
-
-    val lines=sc.textFile("hdfs://192.168.93.128:8020/data/word.txt");
+    ///    scala> val lines = sc.textFile("file:///C:/spark-2.4.3-bin-hadoop2.7/data/testfile/HelloSpark.txt")
+    val lines=sc.textFile("e:\\data\\test.txt");
+   // val lines=sc.textFile("hdfs://192.168.93.128:8020/data/word.txt");
     val wordCounts= lines.flatMap(line=>line.split(" ")).map(word=>(word,1)).reduceByKey(_+_);
 
-     wordCounts.foreach(wordcount=>println(wordcount._1+"appeared"+wordcount._2));
+     wordCounts.foreach(wordcount=>println(wordcount._1+":"+wordcount._2));
 
     sc.stop();
   //spark-submit --class wordcount.WordCount --master local[2] /data/spark-1.0-SNAPSHOT.jar

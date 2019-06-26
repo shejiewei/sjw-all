@@ -7,14 +7,23 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object test {
   def main(args: Array[String]): Unit = {
-
-        val conf=new SparkConf().setAppName("WordCount").setMaster("local[2]");
+    val conf=new SparkConf().setAppName("WordCount").setMaster("local[2]");
     val sc=new SparkContext(conf);
 
 
-    var rdd1=sc.makeRDD(Seq("A","B","C"),2)
+    val intrdd=sc.parallelize(List("a","b"));
 
-    rdd1.zipWithIndex().collect()
+    //intrdd.map(x=x+1).collect()
 
+
+    //intrdd.map(println(x ));
+   // var rdd1=sc.makeRDD(Seq("A","B","C"),2)
+
+   // rdd1.zipWithIndex().collect()
+
+  }
+   def  addOne(x:Int): Unit =
+  {
+    return (x+1)
   }
 }

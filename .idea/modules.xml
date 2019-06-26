@@ -26,7 +26,6 @@
       <module fileurl="file://$PROJECT_DIR$/springboot/sp-oauth2/sp-oauth2.iml" filepath="$PROJECT_DIR$/springboot/sp-oauth2/sp-oauth2.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/sp-security/sp-security.iml" filepath="$PROJECT_DIR$/springboot/sp-security/sp-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/spark/spark.iml" filepath="$PROJECT_DIR$/spark/spark.iml" />
-      <module fileurl="file://D:\gitbase\sjw-all\spark\spark.iml" filepath="D:\gitbase\sjw-all\spark\spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/springserver/springserver.iml" filepath="$PROJECT_DIR$/youfanshop/springserver/springserver.iml" />
