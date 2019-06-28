@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sparkHiveExample">
+    <output-path>$PROJECT_DIR$/out/artifacts/sparkHiveExample</output-path>
+    <root id="archive" name="sparkHiveExample.jar">
+      <element id="directory" name="HiveContext">
+        <element id="file-copy" path="$PROJECT_DIR$/spark/src/main/java/HiveContext/SparkHiveExample.scala" />
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/spark/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
