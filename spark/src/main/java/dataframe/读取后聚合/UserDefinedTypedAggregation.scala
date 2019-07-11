@@ -29,11 +29,11 @@ object UserDefinedTypedAggregation {
       b1
     }
 
-    override def finish(reduction: Average): Double = ???
+   def finish(reduction: Average): Double=reduction.sum.toDouble/reduction.count
 
-    override def bufferEncoder: Encoder[Average] = ???
+  def bufferEncoder: Encoder[Average] = Encoders.product
 
-    override def outputEncoder: Encoder[Double] = ???
+    override def outputEncoder: Encoder[Double] = Encoders.scalaDouble
   }
 
   def main(args: Array[String]): Unit = {
@@ -41,11 +41,30 @@ object UserDefinedTypedAggregation {
     val spark=SparkSession.builder().appName("read").config(conf)
       .getOrCreate();
 
-    import spark.implicits
+    import spark.implicits._
 
-    val ds=spark.read.json("e:\\data\\employees.json")
+    val ds=spark.read.json("e:\\data\\employees.json").as[Employee]
 
+    ds.show()
+    // +-------+------+
+    // |   name|salary|
+    // +-------+------+
+    // |Michael|  3000|
+    // |   Andy|  4500|
+    // | Justin|  3500|
+    // |  Berta|  4000|
+    // +-------+------+
+    val averageSalary=MyAverage.toColumn.name("average_salary")
+    val result=ds.select(averageSalary)
 
+    result.show()
+    // +--------------+
+    // |average_salary|
+    // +--------------+
+    // |        3750.0|
+    // +--------------+
+    // $example off:typed_custom_aggregation$
+    spark.stop()
 
   }
 
