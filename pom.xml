@@ -35,6 +35,7 @@
         <module>youfanshop</module>
         <module>springboot</module>
         <module>spark</module>
+        <module>flink</module>
     </modules>
 
 
