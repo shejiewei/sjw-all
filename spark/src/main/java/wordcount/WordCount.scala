@@ -15,7 +15,10 @@ object WordCount {
     ///    scala> val lines = sc.textFile("file:///C:/spark-2.4.3-bin-hadoop2.7/data/testfile/HelloSpark.txt")
     val lines=sc.textFile("e:\\data\\test.txt");
    // val lines=sc.textFile("hdfs://192.168.93.128:8020/data/word.txt");
+
     val wordCounts= lines.flatMap(line=>line.split(" ")).map(word=>(word,1)).reduceByKey(_+_);
+
+    val tuples = wordCounts.collect()
 
      wordCounts.foreach(wordcount=>println(wordcount._1+":"+wordcount._2));
 
