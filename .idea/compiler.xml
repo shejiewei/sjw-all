@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eruka" />
+        <module name="flink" />
         <module name="hadoop" />
         <module name="hbase" />
         <module name="hive" />
@@ -30,6 +31,7 @@
       <module name="demo (1)" target="1.8" />
       <module name="demo (2)" target="1.8" />
       <module name="eruka" target="1.8" />
+      <module name="flink" target="1.8" />
       <module name="hadoop" target="1.7" />
       <module name="hbase" target="1.8" />
       <module name="hive" target="1.8" />
