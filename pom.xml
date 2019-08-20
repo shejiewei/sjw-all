@@ -36,6 +36,7 @@
         <module>springboot</module>
         <module>spark</module>
         <module>flink</module>
+        <module>geomesa</module>
     </modules>
 
 

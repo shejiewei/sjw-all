@@ -3,31 +3,13 @@
  */
 
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hbase.Cell;
-import org.apache.hadoop.hbase.CellUtil;
-import org.apache.hadoop.hbase.HColumnDescriptor;
-import org.apache.hadoop.hbase.HTableDescriptor;
-import org.apache.hadoop.hbase.TableName;
-import org.apache.hadoop.hbase.client.Get;
-import org.apache.hadoop.hbase.client.HBaseAdmin;
-import org.apache.hadoop.hbase.client.HTable;
-import org.apache.hadoop.hbase.client.Put;
-import org.apache.hadoop.hbase.client.Result;
-import org.apache.hadoop.hbase.client.ResultScanner;
-import org.apache.hadoop.hbase.client.Scan;
+import org.apache.hadoop.hbase.*;
+import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
 import org.apache.hadoop.hbase.filter.FilterList;
 import org.apache.hadoop.hbase.filter.PrefixFilter;
 import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
 public class HBaseDemo {
 
@@ -42,18 +24,20 @@ public class HBaseDemo {
 
     String TN = "phone";
 
-    @Before
+
     public void begin() throws Exception {
         conf = new Configuration();
 
         // 分布式hbase  zk列表指定zk集群
-        conf.set("hbase.zookeeper.quorum", "192.168.93.131");
-
+        conf.set("hbase.zookeeper.quorum", "127.0.0.1");
+        //conf.set("hbase.zookeepr.quorum", zkServer);
+        conf.set("hbase.zookeeper.property.clientPort", "2181");
+        //hConn = HConnectionManager.createConnection(conf);
         admin = new HBaseAdmin(conf);//通过admin对象操作DDL语言
         htable = new HTable(conf, TN);//通过Htable对象操作表DML语言
     }
 
-    @After
+
     public void end() throws Exception {
         if(admin != null) {
             admin.close();
@@ -63,7 +47,7 @@ public class HBaseDemo {
         }
     }
 
-    @Test
+
     public void createTbl() throws Exception {
         if(admin.tableExists(TN)) {
             admin.disableTable(TN);
@@ -79,9 +63,10 @@ public class HBaseDemo {
         desc.addFamily(cf);//创建表的时候必须制定列族，相当于一个DDL语言描述。
 
         admin.createTable(desc);
+        System.out.println("success");
     }
 
-    @Test
+
     public void insertDB1() throws Exception {
         String rowkey = "123";
 
@@ -90,9 +75,10 @@ public class HBaseDemo {
         put.add("cf".getBytes(), "sex".getBytes(), "man".getBytes());
 
         htable.put(put);
+        System.out.println("success");
     }
 
-    @Test
+
     public void getDB1() throws Exception {
         String rowkey = "123";
         Get get = new Get(rowkey.getBytes());
@@ -101,7 +87,7 @@ public class HBaseDemo {
         Result rs = htable.get(get);
         Cell cell = rs.getColumnLatestCell("cf".getBytes(), "name".getBytes());//result返回的是一个Cell对象
 
-        System.out.println(new String(CellUtil.cloneValue(cell)));//取出Cell对象中的值
+        System.out.println(new String("Cell="+CellUtil.cloneValue(cell)));//取出Cell对象中的值
     }
 
     /**
@@ -189,7 +175,7 @@ public class HBaseDemo {
      * 过滤器
      * @throws Exception
      */
-    @Test
+
     public void scanDB2() throws Exception {
         Scan scan = new Scan();
 
@@ -215,4 +201,16 @@ public class HBaseDemo {
 
     }
 
+     public static void main(String[] args) throws Exception {
+
+         HBaseDemo hBaseDemo = new HBaseDemo();
+         hBaseDemo.begin();
+         hBaseDemo.createTbl();
+         hBaseDemo.insertDB1();
+         hBaseDemo.getDB1();
+
+         hBaseDemo.end();
+
+
+     }
 }
