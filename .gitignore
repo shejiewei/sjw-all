@@ -1,0 +1,15 @@
+**/.project
+**/.idea
+**/*.iml
+**/target
+/target/
+**/output/
+**/.settings
+**/.classpath
+**/logs
+../doc
+**/.metadata
+**/bin
+**/.externalToolBuilders
+**/*.class
+**/*.prefs
