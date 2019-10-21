@@ -12,6 +12,16 @@ public abstract class DataSet<T> {
 
     private T data;
 
+    public String type ;//存放返回類型
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     private  List<Operator> operators=new ArrayList<>();
     public DataSet(){
 
@@ -33,6 +43,12 @@ public abstract class DataSet<T> {
     public List<Operator> getOperators() {
         return operators;
     }
+
+    public GroupByOperator groupBy(int position) {
+        return new GroupByOperator(this,position,getType() );
+
+    }
+
 
     public void setOperators(List<Operator> operators) {
         this.operators = operators;
@@ -66,12 +82,14 @@ public abstract class DataSet<T> {
     }
 
     public void exec(){
-        for (int i=0;i<operators.size();i++)
-        {
-            String d=(String)data;
-            MapOperator operator = (MapOperator)operators.get(i);
-            Object map = operator.map(d, " ");
 
-        }
+        AggregateOperator aggregateOperator = (AggregateOperator) this;
+        DataSet dataSet = aggregateOperator.getGroupByOperator().getDataSet();
+
+
+
+        System.out.println(this.getData());
+
+
     }
 }

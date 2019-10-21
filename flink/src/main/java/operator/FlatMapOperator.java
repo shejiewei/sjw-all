@@ -7,11 +7,11 @@ import bean.DataSet;
  */
 public class FlatMapOperator extends DataSet {
     DataSet tDataSet;
-    String resultType;
+
     public <T> FlatMapOperator(DataSet<T> tDataSet, String resultType) {
         this.tDataSet=tDataSet;
-        this.resultType=resultType;
 
+        super.type=resultType;
     }
 
     public DataSet gettDataSet() {
@@ -22,11 +22,5 @@ public class FlatMapOperator extends DataSet {
         this.tDataSet = tDataSet;
     }
 
-    public String getResultType() {
-        return resultType;
-    }
 
-    public void setResultType(String resultType) {
-        this.resultType = resultType;
-    }
 }

@@ -1,8 +1,11 @@
 package core;
 
-import bean.DataSource;
 import bean.DataSet;
+import bean.DataSource;
+import operator.AggregateOperator;
 import operator.FlatMapOperator;
+import operator.GroupByOperator;
+import operator.Map;
 
 /**
  * Created by shejiewei on 2019/10/14.
@@ -15,12 +18,26 @@ public class core {
          text.setData(str);
          FlatMapOperator flatMapOperator = text.flatMap();
 
-         System.out.println(flatMapOperator.getResultType());
-         System.out.println(flatMapOperator.gettDataSet().getData());
+         GroupByOperator groupByOperator = flatMapOperator.groupBy(0);
 
+         AggregateOperator sum = groupByOperator.sum(0);
 
+ /*        System.out.println(sum.getOperator());
+         System.out.println(sum.getGroupByOperator().getDataSet().flatMap().getData());
+         System.out.println(sum.getAllocation());
+         System.out.println(sum.getData());
 
-         text.exec();
+         System.out.println(groupByOperator.getDataSet());
+         System.out.println(groupByOperator.getType());
+
+         System.out.println(flatMapOperator.getType());
+         System.out.println(flatMapOperator.gettDataSet().getData());*/
+
+         //sum.exec();
+
+         Map mapOperator = new Map();
+         Object map = mapOperator.map(str, " ");
+         System.out.println(map.toString());
      }
 
 }
