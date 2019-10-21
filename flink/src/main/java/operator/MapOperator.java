@@ -1,12 +1,18 @@
 package operator;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by shejiewei on 2019/10/14.
  */
 public class MapOperator extends Operator {
    private HashMap<String,Integer> recordMap=new HashMap();
+
+    public MapOperator(Object data, List list) {
+        super(data, list);
+    }
+
     public Object map(String input,String split){
         String[] splits = input.split(split);
         for(int i=0;i<splits.length;i++)

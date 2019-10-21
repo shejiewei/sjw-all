@@ -1,8 +1,6 @@
 package bean;
 
-import operator.MapOperator;
-import operator.Operator;
-import operator.PrintOperator;
+import operator.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +12,15 @@ public abstract class DataSet<T> {
 
     private T data;
 
-    private static List<Operator> operators=new ArrayList<>();
+    private  List<Operator> operators=new ArrayList<>();
+    public DataSet(){
+
+    }
+
+    public DataSet(T data, List<Operator> operators){
+        this.data=data;
+        this.operators=operators;
+    }
 
     public T getData() {
         return data;
@@ -32,15 +38,31 @@ public abstract class DataSet<T> {
         this.operators = operators;
     }
 
-    public MapOperator map(){
-        MapOperator mapOperator = new MapOperator();
-        operators.add(mapOperator);
-        return  mapOperator;
+    public FlatMapOperator flatMap(){
+     /*   if (flatMapper == null) {
+            throw new NullPointerException("FlatMap function must not be null.");
+        }*/
+
+        String callLocation = "main";//Utils.getCallLocationName();
+        String resultType ="Tuple2<String, Integer>";
+        return new FlatMapOperator(this, resultType);
+/*
+        MapOperator mapOperator = new MapOperator(this.data,this.operators);
+
+        //
+       // operators.add(mapOperator);
+        return  mapOperator;*/
     }
     public PrintOperator print(){
-        PrintOperator printOperator = new PrintOperator();
-        operators.add(printOperator);
+        PrintOperator printOperator = new PrintOperator(this.data,this.operators);
+       // operators.add(printOperator);
         return printOperator;
+    }
+
+    public SumOperator sum(){
+        SumOperator sumOperator = new SumOperator(this.data,this.operators);
+      //  operators.add(sumOperator);
+        return sumOperator;
     }
 
     public void exec(){
