@@ -11,30 +11,30 @@
 
     <artifactId>flink</artifactId>
     <dependencies>
-        <dependency>
+       <!-- <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-java</artifactId>
             <version>1.6.1</version>
-            <!-- provided在这表示此依赖只在代码编译的时候使用，运行和打包的时候不使用 -->
-            <!--<scope>provided</scope>-->
+            &lt;!&ndash; provided在这表示此依赖只在代码编译的时候使用，运行和打包的时候不使用 &ndash;&gt;
+            &lt;!&ndash;<scope>provided</scope>&ndash;&gt;
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-java_2.11</artifactId>
             <version>1.6.1</version>
-            <!--<scope>provided</scope>-->
+            &lt;!&ndash;<scope>provided</scope>&ndash;&gt;
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-scala_2.11</artifactId>
             <version>1.6.1</version>
-            <!--<scope>provided</scope>-->
+            &lt;!&ndash;<scope>provided</scope>&ndash;&gt;
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-scala_2.11</artifactId>
             <version>1.6.1</version>
-            <!--<scope>provided</scope>-->
+            &lt;!&ndash;<scope>provided</scope>&ndash;&gt;
         </dependency>
 
         <dependency>
@@ -59,7 +59,7 @@
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
             <version>0.11.0.3</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
 </project>

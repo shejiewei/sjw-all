@@ -3,15 +3,15 @@ package leetcode.最大子序和;
 /**
  * Created by shejiewei on 2019/12/6.
  */
-public class test {
- public static void main(String[] args) {
-  int nums[]={1,-3,4,5,-9,-10,11,-12};
-     int i = maxSubArray(nums);
-     System.out.println("i="+i);
+public class 动态规划 {
+    public static void main(String[] args) {
+        int nums[] = {1, -3, 4, 5, -9, -10, 11, -12};
+        int i = maxSubArray(nums);
+        System.out.println("i=" + i);
 
- }
+    }
 
-    public  static  int maxSubArray(int[] nums) {
+    public static int maxSubArray(int[] nums) {
         //存储以i为结尾的最大子序列和
         int[] dp = new int[nums.length];
         //第0个元素最大序列和为nums[0]
@@ -35,25 +35,23 @@ public class test {
 
     public static int maxSubArray1(int[] nums) {
 
-     int result;
-     int max=nums[0];
-     result=nums[0];
-     for (int i=1;i<nums.length;i++){
+        int result;
+        int max = nums[0];
+        result = nums[0];
+        for (int i = 1; i < nums.length; i++) {
             int currsum;
-             if(result>0)
-             {
-                 currsum=result+nums[i];
-             }
-             else {
-                 currsum=nums[i];
-             }
-             max=Math.max(max,currsum);
+            if (result > 0) {
+                currsum = result + nums[i];
+            } else {
+                currsum = nums[i];
+            }
+            max = Math.max(max, currsum);
 
-             result=currsum;
+            result = currsum;
 
 
-     }
+        }
 
-     return max;
+        return max;
     }
 }
