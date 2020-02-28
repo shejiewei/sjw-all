@@ -15,14 +15,16 @@ import io.netty.util.CharsetUtil;
 public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println("channel is active");
+        ctx.writeAndFlush(Unpooled.copiedBuffer(
+                "server is active!!", CharsetUtil.UTF_8
+        ));
         ctx.fireChannelActive();
     }
     @Override
      public void channelRead(ChannelHandlerContext ctx,Object msg){
         ByteBuf in=(ByteBuf)msg;
-        System.out.println("Server receive"+in.toString(CharsetUtil.UTF_8));
-        ctx.write(in);//将接收到信息写给发送者,而不冲刷出站消息
+        System.out.println("Server receive::::"+in.toString(CharsetUtil.UTF_8));
+       // ctx.write(in);//将接收到信息写给发送者,而不冲刷出站消息
      }
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
@@ -32,7 +34,9 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-         System.out.println("channel 关闭了");
+        ctx.writeAndFlush(Unpooled.copiedBuffer(
+                "channel 关闭了!!", CharsetUtil.UTF_8
+        ));
        cause.printStackTrace();
        ctx.close();//异常后关闭
     }
