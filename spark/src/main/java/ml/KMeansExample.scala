@@ -1,4 +1,5 @@
 /*
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -22,6 +23,8 @@ package ml
 // $example on$
 import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.evaluation.ClusteringEvaluator
+import org.apache.spark.mllib.linalg.Vectors
+import org.apache.spark.mllib.regression.LabeledPoint
 // $example off$
 import org.apache.spark.sql.SparkSession
 
@@ -37,8 +40,10 @@ object KMeansExample {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder
+      .master("local[2]")
       .appName(s"${this.getClass.getSimpleName}")
       .getOrCreate()
+
 
     // $example on$
     // Loads data.
@@ -66,3 +71,4 @@ object KMeansExample {
   }
 }
 // scalastyle:on println
+*/

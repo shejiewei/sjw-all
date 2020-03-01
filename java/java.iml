@@ -98,7 +98,6 @@
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:percolator-client:6.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:parent-join-client:6.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.plugin:rank-eval-client:6.2.4" level="project" />
-    <orderEntry type="library" name="Maven: org.elasticsearch.client:x-pack-transport:5.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.47" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:7.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.72" level="project" />

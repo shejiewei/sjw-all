@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\gitbase\sjw-all\springcloud\1.iml" filepath="D:\gitbase\sjw-all\springcloud\1.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfancommon/YoufanCommon.iml" filepath="$PROJECT_DIR$/youfanshop/youfancommon/YoufanCommon.iml" />
-      <module fileurl="file://D:\gitbase\sjw-all\springcloud\client.iml" filepath="D:\gitbase\sjw-all\springcloud\client.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanPinDaoIndex/demo (1).iml" filepath="$PROJECT_DIR$/youfanshop/youfanPinDaoIndex/demo (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanpindaoindex1/demo (2).iml" filepath="$PROJECT_DIR$/youfanshop/youfanpindaoindex1/demo (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/flink/flink.iml" filepath="$PROJECT_DIR$/flink/flink.iml" />
@@ -27,10 +25,8 @@
       <module fileurl="file://$PROJECT_DIR$/springboot/sp-oauth2/sp-oauth2.iml" filepath="$PROJECT_DIR$/springboot/sp-oauth2/sp-oauth2.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot/sp-security/sp-security.iml" filepath="$PROJECT_DIR$/springboot/sp-security/sp-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/spark/spark.iml" filepath="$PROJECT_DIR$/spark/spark.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/springserver/springserver.iml" filepath="$PROJECT_DIR$/youfanshop/springserver/springserver.iml" />
-      <module fileurl="file://D:\gitbase\sjw-all\springcloud\test.iml" filepath="D:\gitbase\sjw-all\springcloud\test.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanadmin/youfanadmin.iml" filepath="$PROJECT_DIR$/youfanshop/youfanadmin/youfanadmin.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfancloudserver/youfancloudserver.iml" filepath="$PROJECT_DIR$/youfanshop/youfancloudserver/youfancloudserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfandordernew/youfandordernew.iml" filepath="$PROJECT_DIR$/youfanshop/youfandordernew/youfandordernew.iml" />
@@ -39,7 +35,6 @@
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanproduct/youfanproduct.iml" filepath="$PROJECT_DIR$/youfanshop/youfanproduct/youfanproduct.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanproducttype/youfanproducttype.iml" filepath="$PROJECT_DIR$/youfanshop/youfanproducttype/youfanproducttype.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanredisser/youfanredisser.iml" filepath="$PROJECT_DIR$/youfanshop/youfanredisser/youfanredisser.iml" />
-      <module fileurl="file://D:\gitbase\sjw-all\youfanshop\youfanshop.iml" filepath="D:\gitbase\sjw-all\youfanshop\youfanshop.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanshopmerchant/youfanshopmerchant.iml" filepath="$PROJECT_DIR$/youfanshop/youfanshopmerchant/youfanshopmerchant.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanshopuser/youfanshopuser.iml" filepath="$PROJECT_DIR$/youfanshop/youfanshopuser/youfanshopuser.iml" />
     </modules>
