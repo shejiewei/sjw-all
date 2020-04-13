@@ -1,7 +1,6 @@
 package java细节大全.多线程改造for循环;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,20 +9,20 @@ import java.util.concurrent.Executors;
  * Created by shejiewei on 2020/4/1.
  */
 public class test {
-
+   static Map<String,List> testMap=new HashMap<>();
+   static Map<String, Map<String, List>> outMap=new HashMap<>();
      public static void main(String[] args) {
 
-
          List entryList=new ArrayList<>();
-         for (int i=0;i<11;i++){
+         for (int i=0;i<21;i++){
              entryList.add(i);
          }
      
          int sum=0;
-         int step=5;
+         int step=2;
          int num = entryList.size() /step;
          ExecutorService pool = Executors.newCachedThreadPool();
-         final CountDownLatch endGate=new CountDownLatch(num);
+         final CountDownLatch endGate=new CountDownLatch(num+1);
          for (int k=0;k<=num;k++)
          {
         	 int start=k*step;
@@ -35,7 +34,7 @@ public class test {
              Runnable run = new Runnable() {
                  public void run() {
                      try {
-                    	 fun(start,end1,entryList);
+                    	 fun(start,end1,entryList,"aa");
                      } catch (Exception e) {
                      }
                      finally {
@@ -54,16 +53,33 @@ public class test {
         // fun(num*step,  entryList.size() ,entryList);
        
              System.out.println("+++++++++++++");
-        
-      }
-  public static void  fun(int start, int end, List entryList){
+
+         List aa =outMap.get("aa").get("aa");
+         Collections.sort(aa);
+         for(int i=0;i<aa.size();i++)
+         {
+             System.out.println(aa.get(i));
+         }
+     }
+  public static void  fun(int start, int end, List entryList,String name){
 	  
          for (int i=start;i<end;i++){
 
-            System.out.println(entryList.get(i));
+            //System.out.println(entryList.get(i));
             // int o = (int)entryList.get(i);
            //  int i1 = o + 100;
             // entryList.set(i,i);
+             Map<String, List> innerMap = outMap.get(name);
+             if (innerMap == null) {
+                 innerMap = new HashMap<String, List>();  //因为是同一个引用,如果一个线程new了,另一个线程也能感知到
+                 outMap.put(name, innerMap);
+             }
+             List dataList = innerMap.get(name);
+             if (dataList == null) {
+                 dataList = java.util.Collections.synchronizedList(new ArrayList<>());
+                 innerMap.put(name, dataList);
+             }
+             dataList.add(i);
          }
   }
 }
