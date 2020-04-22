@@ -32,13 +32,48 @@ public class FilnkCostKafka {
 
         env.execute("WordCount from Kafka data");*/
 
+
+       /* EnvironmentSettings fsSettings = EnvironmentSettings.newInstance().useOldPlanner().inStreamingMode().build();
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env, fsSettings);
+
+        String topic = "test";
+        Properties prop = new Properties();
+        prop.setProperty("bootstrap.servers", "192.168.93.6:9092");
+        prop.setProperty("zookeeper.connect", "192.168.93.6:2181");
+        prop.setProperty("group.id", "test-consumer-group");
+
+        FlinkKafkaConsumer<String> consumer = new FlinkKafkaConsumer<String>(topic, new SimpleStringSchema(), prop);
+        //设置消费策略
+        consumer.setStartFromGroupOffsets();
+        DataStreamSource<String> text = env.addSource(consumer);
+        //将并行度设置为1
+        text.print("stream").setParallelism(1);
+        env.execute("KafkaSourceExample");*/
+
+
+        /*StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+
+        Properties properties = new Properties();
+
+        properties.setProperty("bootstrap.servers", "192.168.93.6:9092");
+        properties.setProperty("zookeeper.connect", "192.168.93.6:2181");
+        properties.setProperty("group.id", "test-consumer-group");
+
+        DataStream stream = env.addSource(new FlinkKafkaConsumer09<>(
+
+                "test", new SimpleStringSchema(), properties));
+
+        stream.print("stream").setParallelism(1);
+        env.execute("test");*/
+
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         //@TODO checkpoint配置
         //@TODO 设置statebackend
         String topic = "test";
         Properties prop = new Properties();
-        prop.setProperty("bootstrap.servers","192.168.93.6:9092");
-        prop.setProperty("group.id","test-consumer-group");
+        prop .setProperty("bootstrap.servers", "192.168.93.6:9092");
+        prop .setProperty("group.id", "test-consumer-group");
 
         FlinkKafkaConsumer<String> consumer = new FlinkKafkaConsumer<String>(topic, new SimpleStringSchema(), prop);
         //设置消费策略

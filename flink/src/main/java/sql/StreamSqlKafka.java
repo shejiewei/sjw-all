@@ -4,8 +4,8 @@ import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
-import org.apache.flink.table.api.TableEnvironment;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
 
 import java.util.Arrays;
@@ -20,8 +20,11 @@ public class StreamSqlKafka {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+		//StreamTableEnvironment tableEnv = TableEnvironment.getTableEnvironment(env);
+		EnvironmentSettings fsSettings = EnvironmentSettings.newInstance().useOldPlanner().inStreamingMode().build();
 		StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-		StreamTableEnvironment tableEnv = TableEnvironment.getTableEnvironment(env);
+		StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env, fsSettings);
 		env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
 	    String schema = "{\"id\":\"int\",\"name\":\"string\",\"score\":\"int\",\"currentTimeStamp\":\"long\"}";
 
@@ -40,6 +43,7 @@ public class StreamSqlKafka {
 	    DataStream<Map> ds =  env.addSource(myConsumer);
 	    DataStream<Order> orderB = env.fromCollection(Arrays.asList(
 					new Order(2L, "pen", 3),
+
 					new Order(2L, "rubber", 3),
 					new Order(4L, "beer", 1)));
 				// register DataStream as Table
