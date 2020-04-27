@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.scalactic:scalactic_2.11:3.1.0-SNAP10">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.m2/repository/org/scalactic/scalactic_2.11/3.1.0-SNAP10/scalactic_2.11-3.1.0-SNAP10.jar!/" />
+      <root url="jar://E:/repository/org/scalactic/scalactic_2.11/3.1.0-SNAP10/scalactic_2.11-3.1.0-SNAP10.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.m2/repository/org/scalactic/scalactic_2.11/3.1.0-SNAP10/scalactic_2.11-3.1.0-SNAP10-javadoc.jar!/" />
+      <root url="jar://E:/repository/org/scalactic/scalactic_2.11/3.1.0-SNAP10/scalactic_2.11-3.1.0-SNAP10-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.m2/repository/org/scalactic/scalactic_2.11/3.1.0-SNAP10/scalactic_2.11-3.1.0-SNAP10-sources.jar!/" />
+      <root url="jar://E:/repository/org/scalactic/scalactic_2.11/3.1.0-SNAP10/scalactic_2.11-3.1.0-SNAP10-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
