@@ -68,8 +68,7 @@ public class FilnkCostKafka {
         env.execute("test");*/
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        //@TODO checkpoint配置
-        //@TODO 设置statebackend
+
         String topic = "test";
         Properties prop = new Properties();
         prop .setProperty("bootstrap.servers", "192.168.93.6:9092");
@@ -82,6 +81,12 @@ public class FilnkCostKafka {
         //将并行度设置为1
         text.print().setParallelism(1);
         env.execute("KafkaSourceExample");
+
+/*      Properties propsProducer = new Properties(); 写入kafka
+        propsProducer.setProperty("bootstrap.servers", "xxxx:9092");
+        FlinkKafkaProducer011 flinkKafkaProducer=new FlinkKafkaProducer011("write-test",new SimpleStringSchema(),propsProducer);
+        stream.addSink(flinkKafkaProducer);*/
+
     }
 
     public static final class LineSplitter implements FlatMapFunction<String, Tuple2<String, Integer>> {

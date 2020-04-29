@@ -106,9 +106,13 @@ public class ScoreTest {
             this.player = player;
             this.num = num;
         }
+
         @Override
         public String toString() {
-            return player + ":" + num;
+            return "Result{" +
+                    "player='" + player + '\'' +
+                    ", num=" + num +
+                    '}';
         }
     }
 
