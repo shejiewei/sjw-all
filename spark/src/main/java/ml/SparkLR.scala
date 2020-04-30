@@ -24,7 +24,7 @@ import breeze.linalg.{DenseVector, Vector}
 import org.apache.spark.sql.SparkSession
 
 import scala.math.exp
-
+//-Dspark.master=local
 /**
  * Logistic regression based classification.
  * Usage: SparkLR [partitions]
