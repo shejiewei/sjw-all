@@ -15,51 +15,44 @@
  * limitations under the License.
  */
 
+// scalastyle:off println
 package ml
 
-// scalastyle:off println
-
 // $example on$
-import org.apache.spark.ml.clustering.KMeans
-import org.apache.spark.ml.evaluation.ClusteringEvaluator
+import org.apache.spark.ml.feature.Word2Vec
+import org.apache.spark.ml.linalg.Vector
+import org.apache.spark.sql.Row
 // $example off$
 import org.apache.spark.sql.SparkSession
 
-/**
- * An example demonstrating k-means clustering.
- * Run with
- * {{{
- * bin/run-example ml.KMeansExample
- * }}}
- */
-object KMeansExample {
-
-  def main(args: Array[String]): Unit = {
+object Word2VecExample {
+  def main(args: Array[String]) {
     val spark = SparkSession
       .builder
-      .appName(s"kmeans")
+      .appName("Word2Vec example")
       .getOrCreate()
 
     // $example on$
-    // Loads data.
-    val dataset = spark.read.format("libsvm").load("data/mllib/sample_kmeans_data.txt")
+    // Input data: Each row is a bag of words from a sentence or document.
+    val documentDF = spark.createDataFrame(Seq(
+      "Hi I heard about Spark".split(" "),
+      "I wish Java could use case classes".split(" "),
+      "Logistic regression models are neat".split(" ")
+    ).map(Tuple1.apply)).toDF("text")
 
-    // Trains a k-means model.
-    val kmeans = new KMeans().setK(2).setSeed(1L)
-    val model = kmeans.fit(dataset)
+    documentDF.show()
+    documentDF.collect().foreach(println(_))
+    // Learn a mapping from words to Vectors.
+    val word2Vec = new Word2Vec()
+      .setInputCol("text")
+      .setOutputCol("result")
+      .setVectorSize(5)
+      .setMinCount(0)
+    val model = word2Vec.fit(documentDF)
 
-    // Make predictions
-    val predictions = model.transform(dataset)
-
-    // Evaluate clustering by computing Silhouette score
-    val evaluator = new ClusteringEvaluator()
-
-    val silhouette = evaluator.evaluate(predictions)
-    println(s"Silhouette with squared euclidean distance = $silhouette")
-
-    // Shows the result.
-    println("Cluster Centers: ")
-    model.clusterCenters.foreach(println)
+    val result = model.transform(documentDF)
+    result.collect().foreach { case Row(text: Seq[_], features: Vector) =>
+      println(s"Text: [${text.mkString(", ")}] => \nVector: $features\n") }
     // $example off$
 
     spark.stop()
