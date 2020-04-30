@@ -5,7 +5,8 @@ import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
+import org.apache.flink.table.api.java.StreamTableEnvironment;
 import org.apache.flink.util.Collector;
 
 import java.util.Properties;
@@ -67,25 +68,40 @@ public class FilnkCostKafka {
         stream.print("stream").setParallelism(1);
         env.execute("test");*/
 
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+      /*  StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         String topic = "test";
         Properties prop = new Properties();
-        prop .setProperty("bootstrap.servers", "192.168.93.6:9092");
+        prop .setProperty("bootstrap.servers", "192.168.93.5:9092");
         prop .setProperty("group.id", "test-consumer-group");
 
-        FlinkKafkaConsumer<String> consumer = new FlinkKafkaConsumer<String>(topic, new SimpleStringSchema(), prop);
+        FlinkKafkaConsumer010<String> consumer = new FlinkKafkaConsumer010<String>(topic, new SimpleStringSchema(), prop);
+        //设置消费策略
+        consumer.setStartFromGroupOffsets();
+        DataStreamSource<String> text = env.addSource(consumer);
+        //将并行度设置为1
+        text.print().setParallelism(1);
+        env.execute("KafkaSourceExample");*/
+
+/*      Properties propsProducer = new Properties(); 写入kafka
+        propsProducer.setProperty("bootstrap.servers", "xxxx:9092");
+        FlinkKafkaProducer011 flinkKafkaProducer=new FlinkKafkaProducer011("write-test",new SimpleStringSchema(),propsProducer);
+        stream.addSink(flinkKafkaProducer);*/
+
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        final StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
+        String topic = "test";
+        Properties prop = new Properties();
+        prop .setProperty("bootstrap.servers", "192.168.93.5:9092");
+        prop .setProperty("group.id", "test-consumer-group");
+
+        FlinkKafkaConsumer010<String> consumer = new FlinkKafkaConsumer010<String>(topic, new SimpleStringSchema(), prop);
         //设置消费策略
         consumer.setStartFromGroupOffsets();
         DataStreamSource<String> text = env.addSource(consumer);
         //将并行度设置为1
         text.print().setParallelism(1);
         env.execute("KafkaSourceExample");
-
-/*      Properties propsProducer = new Properties(); 写入kafka
-        propsProducer.setProperty("bootstrap.servers", "xxxx:9092");
-        FlinkKafkaProducer011 flinkKafkaProducer=new FlinkKafkaProducer011("write-test",new SimpleStringSchema(),propsProducer);
-        stream.addSink(flinkKafkaProducer);*/
 
     }
 
