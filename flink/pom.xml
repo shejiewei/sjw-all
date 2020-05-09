@@ -12,18 +12,18 @@
     <artifactId>flink</artifactId>
 
     <properties>
-        <calcite.version>1.21.0</calcite.version>
-        <elasticsearch.version>6.3.1</elasticsearch.version>
-        <flink.version>1.10.0</flink.version>
-        <flink.shaded.version>9.0</flink.shaded.version>
-        <hadoop.version>2.7.5</hadoop.version>
-        <scala.binary.version>2.11</scala.binary.version>
-        <scala.version>2.11.11</scala.version>
+    <calcite.version>1.21.0</calcite.version>
+    <elasticsearch.version>6.3.1</elasticsearch.version>
+    <flink.version>1.10.0</flink.version>
+    <flink.shaded.version>9.0</flink.shaded.version>
+    <hadoop.version>2.7.5</hadoop.version>
+    <scala.binary.version>2.11</scala.binary.version>
+    <scala.version>2.11.11</scala.version>
 
-        <!--other-->
-        <collections.version>3.2.2</collections.version>
-        <lang3.version>3.3.2</lang3.version>
-    </properties>
+    <!--other-->
+    <collections.version>3.2.2</collections.version>
+    <lang3.version>3.3.2</lang3.version>
+</properties>
     <repositories>
         <repository>
             <id>aliyun</id>
