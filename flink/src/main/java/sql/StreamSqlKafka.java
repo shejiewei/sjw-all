@@ -31,7 +31,7 @@ public class StreamSqlKafka {
 	 
 	    Properties properties = new Properties();
 	    properties.setProperty("bootstrap.servers", KAFKASERVER);
-	    properties.setProperty("zookeeper.connect", "192.168.93.6:2181");
+	    properties.setProperty("zookeeper.connect", "192.168.93.5:2181");
 	    properties.setProperty("group.id", "test");
 	        //DataStream<String> stream = env
 	        //		.addSource(new FlinkKafkaConsumer08<>("topic", new SimpleStringSchema(), properties))
