@@ -38,7 +38,9 @@ object KMeansExample {
     val spark = SparkSession
       .builder
       .appName(s"kmeans")
+        .master("local")
       .getOrCreate()
+
 
     // $example on$
     // Loads data.

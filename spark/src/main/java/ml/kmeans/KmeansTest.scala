@@ -53,9 +53,10 @@ object KmeansTest {
     }).cache()
 
     parsedTestData.collect().foreach(testDataLine => {
-      val predictedClusterIndex:
+      println("testDataLine:"+testDataLine)
+       val predictedClusterIndex:
         Int =model.predict(testDataLine)
-      println("The data " + testDataLine.toString + " belongs to cluster " +
+        println("The data " + testDataLine.toString + " belongs to cluster " +
         predictedClusterIndex)
     })
     println("Spark MLlib K-means clustering test finished.")

@@ -59,22 +59,20 @@ object SparkKMeans {
 
   def main(args: Array[String]) {
 
-    if (args.length < 3) {
-      System.err.println("Usage: SparkKMeans <file> <k> <convergeDist>")
-      System.exit(1)
-    }
+
 
     showWarning()
 
     val spark = SparkSession
       .builder
       .appName("SparkKMeans")
+        .master("local")
       .getOrCreate()
 
-    val lines = spark.read.textFile(args(0)).rdd
+    val lines = spark.read.textFile("data/mllib/sample_kmeans_data.txt").rdd
     val data = lines.map(parseVector _).cache()
-    val K = args(1).toInt
-    val convergeDist = args(2).toDouble
+    val K = "4".toInt
+    val convergeDist = "0.6".toDouble
 
     val kPoints = data.takeSample(withReplacement = false, K, 42)
     var tempDist = 1.0
