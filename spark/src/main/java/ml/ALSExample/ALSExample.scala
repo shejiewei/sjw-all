@@ -54,7 +54,10 @@ object ALSExample {
     val ratings = spark.read.textFile("data/mllib/als/sample_movielens_ratings.txt")
       .map(parseRating)
       .toDF()
+    ratings.show()
     val Array(training, test) = ratings.randomSplit(Array(0.8, 0.2))
+
+
 
     // Build the recommendation model using ALS on the training data
     val als = new ALS()
@@ -84,9 +87,11 @@ object ALSExample {
 
     // Generate top 10 movie recommendations for a specified set of users
     val users = ratings.select(als.getUserCol).distinct().limit(3)
+    users.show()
     val userSubsetRecs = model.recommendForUserSubset(users, 10)
     // Generate top 10 user recommendations for a specified set of movies
     val movies = ratings.select(als.getItemCol).distinct().limit(3)
+    movies.show()
     val movieSubSetRecs = model.recommendForItemSubset(movies, 10)
     // $example off$
     userRecs.show()
