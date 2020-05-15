@@ -1,4 +1,4 @@
-package example1;
+package 聊天;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

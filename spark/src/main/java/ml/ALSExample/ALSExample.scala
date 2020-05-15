@@ -82,22 +82,29 @@ object ALSExample {
 
     // Generate top 10 movie recommendations for each user
     val userRecs = model.recommendForAllUsers(10)
+    println(" userRecs.show()")
+    userRecs.show()
     // Generate top 10 user recommendations for each movie
     val movieRecs = model.recommendForAllItems(10)
-
+    println("    movieRecs.show()")
+    movieRecs.show()
     // Generate top 10 movie recommendations for a specified set of users
     val users = ratings.select(als.getUserCol).distinct().limit(3)
-    users.show()
+     println("users.show")
+     users.show()
     val userSubsetRecs = model.recommendForUserSubset(users, 10)
+     println(" userSubsetRecs.show()")
+    userSubsetRecs.show()
     // Generate top 10 user recommendations for a specified set of movies
     val movies = ratings.select(als.getItemCol).distinct().limit(3)
     movies.show()
     val movieSubSetRecs = model.recommendForItemSubset(movies, 10)
     // $example off$
-    userRecs.show()
-    movieRecs.show()
-    userSubsetRecs.show()
+    println(" movieSubSetRecs.show()")
     movieSubSetRecs.show()
+
+
+
 
     spark.stop()
   }
