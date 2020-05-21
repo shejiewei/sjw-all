@@ -37,6 +37,8 @@
         <module>spark</module>
         <module>flink</module>
         <module>geomesa</module>
+        <module>calcite</module>
+        <module>calcite</module>
     </modules>
     <repositories>
         <repository>
