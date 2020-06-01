@@ -1,0 +1,105 @@
+package cep.v1;
+
+import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.common.serialization.SimpleStringSchema;
+import org.apache.flink.cep.CEP;
+import org.apache.flink.cep.PatternStream;
+import org.apache.flink.cep.functions.PatternProcessFunction;
+import org.apache.flink.cep.pattern.Pattern;
+import org.apache.flink.cep.pattern.conditions.SimpleCondition;
+import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.functions.AssignerWithPeriodicWatermarks;
+import org.apache.flink.streaming.api.watermark.Watermark;
+import org.apache.flink.streaming.api.windowing.time.Time;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.util.Collector;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
+public class CEPWithTimeExample {
+    public static void main(String[] args) throws Exception {
+
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        env.setParallelism(1);
+        Properties properties = new Properties();
+        properties .put("bootstrap.servers", "192.168.93.5:9092");
+        properties .put("zookeeper.connect", "192.168.93.5:2181");
+        properties.put("group.id", "test-consumer-group");
+        properties.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+        properties.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+        properties.put("auto.offset.reset", "latest");
+        DataStream<String> stream = env.addSource(new FlinkKafkaConsumer<>(
+                "test1",
+                new SimpleStringSchema(),
+                properties)).setParallelism(1);
+        DataStream<SubEvent> input = stream.map(new MapFunction<String, SubEvent>() {
+            @Override
+            public SubEvent map(String value) throws Exception {
+                String[] v = value.split(",");
+                return new SubEvent(v[0], EventType.valueOf(v[1]), Double.parseDouble(v[2]), v[3]);
+            }
+        }).assignTimestampsAndWatermarks(new BoundedOutOfOrdernessGenerator());
+
+        Pattern<SubEvent, ?> pattern = Pattern.<SubEvent>begin("start").where(
+                new SimpleCondition<SubEvent>() {
+                    @Override
+                    public boolean filter(SubEvent subEvent) {
+                        System.out.println(subEvent + " from start at " + StringUtilsPlus.stampToDate(System.currentTimeMillis()));
+                        return subEvent.getType() == EventType.VALID && subEvent.getVolume() < 10;
+                    }
+                }
+        ).next("end").where(
+                new SimpleCondition<SubEvent>() {
+                    @Override
+                    public boolean filter(SubEvent subEvent) {
+                        System.out.println(subEvent + " from end");
+                        return subEvent.getType() == EventType.VALID && subEvent.getVolume() > 100;
+                    }
+                }
+        ).within(Time.seconds(10));
+
+        PatternStream<SubEvent> patternStream = CEP.pattern(input, pattern);
+
+        DataStream<Alert> result = patternStream.process(
+                new PatternProcessFunction<SubEvent, Alert>() {
+                    @Override
+                    public void processMatch(
+                            Map<String, List<SubEvent>> pattern,
+                            Context ctx,
+                            Collector<Alert> out) throws Exception {
+
+                        System.out.println(pattern);
+
+                        out.collect(new Alert("111", "CRITICAL"));
+                    }
+                });
+
+        result.print();
+
+        env.execute("Flink cep example");
+    }
+
+    private static class BoundedOutOfOrdernessGenerator implements AssignerWithPeriodicWatermarks<SubEvent> {
+
+        private final long maxOutOfOrderness = 5000;
+
+        private long currentMaxTimestamp;
+
+        @Override
+        public long extractTimestamp(SubEvent subEvent, long previousElementTimestamp) {
+            System.out.println("SubEvent is " + subEvent);
+            long timestamp = StringUtilsPlus.dateToStamp(subEvent.getDate());
+            currentMaxTimestamp = Math.max(timestamp, currentMaxTimestamp);
+            System.out.println("watermark:" + StringUtilsPlus.stampToDate(String.valueOf(currentMaxTimestamp - maxOutOfOrderness)));
+            return timestamp;
+        }
+
+        @Override
+        public Watermark getCurrentWatermark() {
+            return new Watermark(currentMaxTimestamp - maxOutOfOrderness);
+        }
+    }
+}
