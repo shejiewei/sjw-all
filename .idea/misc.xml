@@ -7,16 +7,23 @@
         <option value="$PROJECT_DIR$/springcloud/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/springbootsecurity/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/springbootsecurity1/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot/sp-oauth2/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot/sp-security/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/calcite/pom.xml" />
+        <option value="$PROJECT_DIR$/geomesa/pom.xml" />
+        <option value="$PROJECT_DIR$/hadoop/pom.xml" />
+        <option value="$PROJECT_DIR$/hbase/pom.xml" />
+        <option value="$PROJECT_DIR$/hive/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
+        <option value="$PROJECT_DIR$/rocketmq/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/pom.xml" />
         <option value="$PROJECT_DIR$/springboot/springbootsecurity/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud/ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud/sc/pom.xml" />
+        <option value="$PROJECT_DIR$/youfanshop/pom.xml" />
       </set>
     </option>
   </component>

@@ -2,41 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfancommon/YoufanCommon.iml" filepath="$PROJECT_DIR$/youfanshop/youfancommon/YoufanCommon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanPinDaoIndex/demo (1).iml" filepath="$PROJECT_DIR$/youfanshop/youfanPinDaoIndex/demo (1).iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanpindaoindex1/demo (2).iml" filepath="$PROJECT_DIR$/youfanshop/youfanpindaoindex1/demo (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/flink/flink.iml" filepath="$PROJECT_DIR$/flink/flink.iml" />
-      <module fileurl="file://$PROJECT_DIR$/geomesa/geomesa.iml" filepath="$PROJECT_DIR$/geomesa/geomesa.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hadoop/hadoop.iml" filepath="$PROJECT_DIR$/hadoop/hadoop.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hbase/hbase.iml" filepath="$PROJECT_DIR$/hbase/hbase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hive/hive.iml" filepath="$PROJECT_DIR$/hive/hive.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloud/oauth2/oauth2.iml" filepath="$PROJECT_DIR$/springcloud/oauth2/oauth2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/rabbitmqspringboot.iml" filepath="$PROJECT_DIR$/youfanshop/rabbitmqspringboot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloud/ribbon/ribbon.iml" filepath="$PROJECT_DIR$/springcloud/ribbon/ribbon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rocketmq/rocketmq.iml" filepath="$PROJECT_DIR$/rocketmq/rocketmq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloud/sc/sc-eureka.iml" filepath="$PROJECT_DIR$/springcloud/sc/sc-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala/scala.iml" filepath="$PROJECT_DIR$/scala/scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/sjw-all.iml" filepath="$PROJECT_DIR$/sjw-all.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/sjwrabbitmqserv/sjwrabbitmqserv.iml" filepath="$PROJECT_DIR$/youfanshop/sjwrabbitmqserv/sjwrabbitmqserv.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/solrtest/solrtest.iml" filepath="$PROJECT_DIR$/youfanshop/solrtest/solrtest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/sp-oauth2/sp-oauth2.iml" filepath="$PROJECT_DIR$/springboot/sp-oauth2/sp-oauth2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/sp-security/sp-security.iml" filepath="$PROJECT_DIR$/springboot/sp-security/sp-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/spark/spark.iml" filepath="$PROJECT_DIR$/spark/spark.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/springserver/springserver.iml" filepath="$PROJECT_DIR$/youfanshop/springserver/springserver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanadmin/youfanadmin.iml" filepath="$PROJECT_DIR$/youfanshop/youfanadmin/youfanadmin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfancloudserver/youfancloudserver.iml" filepath="$PROJECT_DIR$/youfanshop/youfancloudserver/youfancloudserver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfandordernew/youfandordernew.iml" filepath="$PROJECT_DIR$/youfanshop/youfandordernew/youfandordernew.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanpayserv/youfanpayserv.iml" filepath="$PROJECT_DIR$/youfanshop/youfanpayserv/youfanpayserv.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanpayserve1/youfanpayserve1.iml" filepath="$PROJECT_DIR$/youfanshop/youfanpayserve1/youfanpayserve1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanproduct/youfanproduct.iml" filepath="$PROJECT_DIR$/youfanshop/youfanproduct/youfanproduct.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanproducttype/youfanproducttype.iml" filepath="$PROJECT_DIR$/youfanshop/youfanproducttype/youfanproducttype.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanredisser/youfanredisser.iml" filepath="$PROJECT_DIR$/youfanshop/youfanredisser/youfanredisser.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanshopmerchant/youfanshopmerchant.iml" filepath="$PROJECT_DIR$/youfanshop/youfanshopmerchant/youfanshopmerchant.iml" />
-      <module fileurl="file://$PROJECT_DIR$/youfanshop/youfanshopuser/youfanshopuser.iml" filepath="$PROJECT_DIR$/youfanshop/youfanshopuser/youfanshopuser.iml" />
     </modules>
   </component>
 </project>
