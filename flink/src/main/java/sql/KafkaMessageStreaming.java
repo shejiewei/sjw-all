@@ -30,8 +30,8 @@ public class KafkaMessageStreaming {
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
 
         Properties props = new Properties();
-        props.setProperty("bootstrap.servers", "192.168.93.6:9092");
-        props.setProperty("zookeeper.connect", "192.168.93.6:2181");
+        props.setProperty("bootstrap.servers", "192.168.93.5:9092");
+        props.setProperty("zookeeper.connect", "192.168.93.5:2181");
         props.setProperty("group.id", "test-consumer-group");
 
         //    args[0] = "test-0921";  //传入的是kafka中的topic
@@ -62,7 +62,7 @@ public class KafkaMessageStreaming {
         keyedStream.print();
         //    将结果保存到文件中
         //    args[1] = "E:\\FlinkTest\\KafkaFlinkTest";//传入的是结果保存的路径
-        keyedStream.writeAsText("E:\\FlinkTest\\KafkaFlinkTest");
+       // keyedStream.writeAsText("E:\\FlinkTest\\KafkaFlinkTest");
         env.execute("Kafka-Flink Test");
     }
 }
