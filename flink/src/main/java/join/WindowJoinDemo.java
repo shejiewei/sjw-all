@@ -32,7 +32,33 @@ public class WindowJoinDemo {
             DataStream<Tuple2<String, Integer>> salaries,
             long windowSize) {
 
-        return grades.join(salaries)
+       return    grades.join(salaries)
+                  .where(new KeySelector<Tuple2<String,Integer>, Object>() {
+                      @Override
+                      public Object getKey(Tuple2<String, Integer> v) throws Exception {
+                          return v.f0;
+                      }
+                  })
+                  .equalTo(new KeySelector<Tuple2<String,Integer>, Object>() {
+                      @Override
+                      public Object getKey(Tuple2<String, Integer> v) throws Exception {
+                          return v.f0;
+                      }
+                  })
+                  .window(TumblingProcessingTimeWindows.of(Time.seconds(windowSize)))
+               .apply(new JoinFunction<Tuple2<String, Integer>, Tuple2<String, Integer>, Tuple3<String, Integer, Integer>>() {
+
+                   @Override
+                   public Tuple3<String, Integer, Integer> join(
+                           Tuple2<String, Integer> first,
+                           Tuple2<String, Integer> second) {
+                       return new Tuple3<String, Integer, Integer>(first.f0, first.f1, second.f1);
+                   }
+               });
+
+
+
+        /*return grades.join(salaries)
                 .where(new KeySelector<Tuple2<String, Integer>, Object>() {
                     @Override
                     public Object getKey(Tuple2<String, Integer> v) throws Exception {
@@ -54,7 +80,7 @@ public class WindowJoinDemo {
                             Tuple2<String, Integer> second) {
                         return new Tuple3<String, Integer, Integer>(first.f0, first.f1, second.f1);
                     }
-                });
+                });*/
     }
 
     private static class DataSource1 extends RichParallelSourceFunction<Tuple2<String, Integer>> {
