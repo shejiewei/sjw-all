@@ -21,8 +21,8 @@ public class CEPExample {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         Properties properties = new Properties();
-        properties .put("bootstrap.servers", "192.168.93.5:9092");
-        properties .put("zookeeper.connect", "192.168.93.5:2181");
+        properties .put("bootstrap.servers", "127.0.0.1:9092");
+        properties .put("zookeeper.connect", "127.0.0.1:2181");
         properties.put("group.id", "test-consumer-group");
         properties.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         properties.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
