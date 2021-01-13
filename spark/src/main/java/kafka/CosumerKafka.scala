@@ -8,7 +8,7 @@ import org.apache.spark.streaming.kafka010.{ConsumerStrategies, KafkaUtils, Loca
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 import scala.collection.mutable
-/**
+ /**
   * Created by shejiewei on 2020/5/8.
   */
 object CosumerKafka {
