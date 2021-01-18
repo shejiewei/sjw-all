@@ -2,15 +2,7 @@ package sparksql
 
 import java.sql.DriverManager
 
-/**
-  * Created by shejiewei on 2019/4/15.
-  */
 
-/**   使用时,要先启动thriftserver
-  *
-  *
-  *
-  */
 object SparkSqlThriftServer {
 
   def main(args: Array[String]): Unit = {

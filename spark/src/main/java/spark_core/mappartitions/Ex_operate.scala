@@ -29,7 +29,13 @@ object Ex_operate {
     // mapPartitions业务逻辑里的(_.map(_*2))的map是scala的map，不是spark的map，一定要区分清楚
     listRDD.mapPartitions(_.map(_*2)).mapPartitions(_.map(_.toString+"m")).collect().foreach(println)
 
-    listRDD.mapPartitions(_.map(_*3)).collect().foreach(println)
+    listRDD.mapPartitions(_.map(_*3)).mapPartitions(_.map(_.toString+"m")).collect().foreach(println)
+
+    listRDD.mapPartitionsWithIndex{
+      case(num,data)=>{
+        data.map((_,"分区号"+num))
+      }
+    }.collect().foreach(println)
 
 
     //todo mapPartitionsWithIndex
@@ -41,6 +47,22 @@ object Ex_operate {
     }.collect().foreach(println)
 
     val listTuple = sc.parallelize(List(("kpop","female"),("zorro","male"),("mobin","male"),("lucy","female")),2)
+    listTuple.mapPartitionsWithIndex(
+
+        (num,data)=>{
+          var women=List[String]()
+          while (data.hasNext){
+            val next=data.next()
+            next match {
+              case (_,"female")=>women=next._1::women
+              case _=>
+            }
+          }
+          women.iterator
+        }
+    ).collect().foreach(println)
+/*
+
     listTuple.mapPartitionsWithIndex((num,data)=>{
       var women = List[String]()
       while (data.hasNext){
@@ -52,6 +74,7 @@ object Ex_operate {
       }
       women.iterator
     }).collect().foreach(println)
+*/
 
     //todo driver和executor
     // 除了计算部分在executor（计算节点），其他部分都在driver里
