@@ -17,7 +17,7 @@ object Spark15_Serializable {
     val search = new Search("h")
 
 //    val match1:RDD[String] = search.getMatch1(rdd)
-    val match1:RDD[String] = search.getMatch2(rdd)
+    val match1:RDD[String] = search.getMatch1(rdd)
     match1.collect().foreach(println)
 
     //释放资源
@@ -42,6 +42,13 @@ class Search(query: String) extends  java.io.Serializable {
   def getMatch2(rdd: RDD[String]): RDD[String] = {
     val q = query //成员属性，字符串本身就会序列化，将类变量赋值给局部变量
     rdd.filter(x => x.contains(query))
+  }
+
+  def getMatch3(rdd:RDD[String]):RDD[String]={
+    val qq=query
+    val aa="hadoop"
+    rdd.filter(x=>x.contains(aa))
+
   }
 
 }

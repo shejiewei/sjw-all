@@ -18,7 +18,7 @@ object Spark18_Mysql {
     val driver = "com.mysql.jdbc.Driver"
     val url = "jdbc:mysql://localhost:3306/test"
     val userName = "root"
-    val passMd = "root"
+    val passMd = "123"
 
     //创建jdbcRDD，方法数据库,查询数据
     //    val sql = "select id ,id2 from dim  where id >1 and id <1000"
@@ -39,7 +39,7 @@ object Spark18_Mysql {
     //    )
     //    jdbcRDD.collect()
     //  保存数据
-    var dataRDD: RDD[(String, Int)] = sc.makeRDD(List(("zongzhong", 23), ("lishi", 23)))
+    var dataRDD: RDD[(String, Int)] = sc.makeRDD(List(("root", 123)))
     //    Class.forName(driver)
     //    val conection = java.sql.DriverManager.getConnection(url, userName, passMd)
     //    dataRDD.foreach {

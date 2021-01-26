@@ -19,7 +19,7 @@ object Spark22_Var {
 
     var rdd1: RDD[(Int, String)] = sc.makeRDD(List((1, "a"), (2, "b"), (3, "c")))
 
-//    var rdd2: RDD[(Int, Int)] = sc.makeRDD(List((1, 1), (2, 2), (3, 3)))
+    //    var rdd2: RDD[(Int, Int)] = sc.makeRDD(List((1, 1), (2, 2), (3, 3)))
     ////    (1,(a,1))
     ////    (3,(a,3))
     ////    (2,(b,2))
@@ -27,15 +27,10 @@ object Spark22_Var {
     //    joinRDD.foreach(println)
 
 
-
-
-
-
-
-    val list = List((1,1),(2,2),(3,3))
+    val list = List((1, 1), (2, 2), (3, 3))
     //可以使用广播变量减少数据的传输
     //构建广播变量
-    var broadcast: Broadcast[List[(Int, Int)]] = sc.broadcast(list) //共享的只读变量，减少数据传输的总量
+    /*    var broadcast: Broadcast[List[(Int, Int)]] = sc.broadcast(list) //共享的只读变量，减少数据传输的总量
     val resultRDD:RDD[(Int,(String,Any))] = rdd1.map{ //map没有shuffle
       case(key,value) =>{
         var v2:Any = null
@@ -47,11 +42,28 @@ object Spark22_Var {
         }
         (key,(value,v2))
       }
+    }*/
+
+
+    var broadcast: Broadcast[List[(Int, Int)]] = sc.broadcast(list)
+
+    val resultRDD: RDD[(Int, (String, Any))] = rdd1.map {
+      case (key, value) => {
+        var v2: Any = null
+        for (t <- broadcast.value) {
+          if (key == t._2) {
+            v2 = t._2
+          }
+
+        }
+        (key, (value,v2.toString))
+      }
+
     }
-    resultRDD.foreach(println)
-    //释放资源
-    sc.stop()
-  }
+        resultRDD.foreach(println)
+        //释放资源
+        sc.stop()
+    }
 
 
 }
