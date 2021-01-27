@@ -41,7 +41,7 @@ object SparkSQL05_SQL {
     //创建一个视图
     df.createOrReplaceTempView("Tperson")
     //基于注册的视图写SQL
-    val res:DataFrame = sparkSession.sql("SELECT name,age FROM Tperson ORDER BY age asc")
+    val res:DataFrame = sparkSession.sql("SELECT name,age,facevalue FROM Tperson ORDER BY age asc")
 
     res.show()
 

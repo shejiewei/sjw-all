@@ -20,8 +20,8 @@ object SparkSQL02_SQL {
 
     //将DataFrame转成一张表
     frame.createOrReplaceTempView("user")
-    session.sql("select * from user").show
-
+ //   session.sql("select * from user").show
+    session.sql("select * from user where name=\"123\"").show
     //展示数据
     frame.show()
 

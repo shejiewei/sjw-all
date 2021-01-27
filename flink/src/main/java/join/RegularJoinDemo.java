@@ -12,8 +12,8 @@ import org.apache.flink.table.api.java.StreamTableEnvironment;
 
 public class RegularJoinDemo {
 	public static void main(String[] args) throws Exception {
-		EnvironmentSettings settings = EnvironmentSettings.newInstance().inStreamingMode().useBlinkPlanner().build();
-		StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+		EnvironmentSettings settings = EnvironmentSettings.newInstance().inStreamingMode().useAnyPlanner().build();
+		StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironment();
 		StreamTableEnvironment tEnv = StreamTableEnvironment.create(env, settings);
 		env.setParallelism(1);
 
@@ -26,7 +26,7 @@ public class RegularJoinDemo {
 				new Tuple2<>("Tom", "./opt")
 		);
 
-		DataStream<Tuple2<String, String>> greenStream = env.fromElements(
+		DataStream<Tuple2<String, String>> userStream = env.fromElements(
 				new Tuple2<>("Mary", "20"),
 				new Tuple2<>("Bob", "21"),
 				new Tuple2<>("Mary", "20"),
@@ -35,7 +35,7 @@ public class RegularJoinDemo {
 		);
 
 		Table clicksTable = tEnv.fromDataStream(orangeStream, "name,url");
-		Table userInfo = tEnv.fromDataStream(greenStream, "name,age");
+		Table userInfo = tEnv.fromDataStream(userStream, "name,age");
 
 		tEnv.registerTable("clicks", clicksTable);
 		tEnv.registerTable("users", userInfo);

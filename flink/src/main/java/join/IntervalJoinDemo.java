@@ -18,9 +18,9 @@ public class IntervalJoinDemo {
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
 
         Tuple3[] clickData = new Tuple3[]{
-                new Tuple3<>("Mary", "./home", 1584034230000L),//2020-03-13 1:30:30
-                new Tuple3<>("Liz", "./opt", 1584034238000L),//2020-03-13 1:30:38
-                new Tuple3<>("Bob", "./cart", 1584034240000L)//2020-03-13 1:30:40
+                new Tuple3<>("Mary", "A", 1584034230000L),//2020-03-13 1:30:30
+                new Tuple3<>("Liz", "C", 1584034238000L),//2020-03-13 1:30:38
+                new Tuple3<>("Bob", "B", 1584034240000L)//2020-03-13 1:30:40
         };
 
         Tuple3[] locationData = new Tuple3[]{
@@ -44,7 +44,7 @@ public class IntervalJoinDemo {
 
         orangeStream
                 .keyBy(0)
-                .intervalJoin(greenStream.keyBy(0))
+                .intervalJoin(greenStream.keyBy(1))
                 .between(Time.seconds(-5), Time.seconds(5))
                 .process(new ProcessJoinFunction<Tuple3<String, String, Long>, Tuple3<String, String, Long>, Object>() {
                     @Override
