@@ -39,7 +39,7 @@ public class BatchJob {
 
 
 
-		env.registerCachedFile("/Users/wangchangye/WorkSpace/quickstart/distributedcache.txt", "distributedCache");
+		env.registerCachedFile("in/person.txt", "distributedCache");
         //1：注册一个文件,可以使用hdfs上的文件 也可以是本地文件进行测试
         DataSource<String> data = env.fromElements("Linea", "Lineb", "Linec", "Lined");
 
