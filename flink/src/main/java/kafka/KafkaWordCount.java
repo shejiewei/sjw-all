@@ -14,13 +14,13 @@ import org.apache.flink.util.Collector;
 
 import java.util.Properties;
 public class KafkaWordCount {
-    private static final String READ_TOPIC = "test1";
+    private static final String READ_TOPIC = "test10";
     //这里要注意在本地window的host文件配置ip和hostname
     public static void main(String[] args) throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.93.5:9092");
-        props.put("zookeeper.connect", "192.168.93.5:2181");
+        props.put("bootstrap.servers", "120.78.216.6:9017");
+        props.put("zookeeper.connect", "120.78.216.6:9018");
         props.put("group.id", "test-consumer-group");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
