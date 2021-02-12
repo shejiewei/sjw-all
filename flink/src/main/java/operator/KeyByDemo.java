@@ -9,7 +9,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 public class KeyByDemo {
     public static void main(String[] args) throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironment();
-        env.setParallelism(2);
+        env.setParallelism(3);
 
         DataStream<Tuple2<String, Integer>> input = env.fromElements(new Tuple2<>("foo", 1), new Tuple2<>("foo", 2),
                 new Tuple2<>("bar", 3), new Tuple2<>("baz", 4),
@@ -17,7 +17,7 @@ public class KeyByDemo {
 
         input.print("Input data");
         KeyedStream<Tuple2<String, Integer>, Tuple> keyed = input.keyBy(0);
-        keyed.print("Keyed data");
+       // keyed.print("Keyed data");
         env.execute("KeyBy Demo");
     }
 }
