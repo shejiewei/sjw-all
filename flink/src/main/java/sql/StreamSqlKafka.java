@@ -15,8 +15,8 @@ import java.util.Properties;
 
 public class StreamSqlKafka {
 
-	private static final String KAFKASERVER = "192.168.93.6:9092";
-	private static final String KAFKATOPIC = "test";
+	private static final String KAFKASERVER = "120.78.216.6:9017";
+	private static final String KAFKATOPIC = "test121";
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -31,8 +31,8 @@ public class StreamSqlKafka {
 	 
 	    Properties properties = new Properties();
 	    properties.setProperty("bootstrap.servers", KAFKASERVER);
-	    properties.setProperty("zookeeper.connect", "192.168.93.5:2181");
-	    properties.setProperty("group.id", "test");
+	    properties.setProperty("zookeeper.connect", "120.78.216.6:9018");
+	    properties.setProperty("group.id", "test-consumer-group");
 	        //DataStream<String> stream = env
 	        //		.addSource(new FlinkKafkaConsumer08<>("topic", new SimpleStringSchema(), properties))
 //	        DataStream<Tuple3<Long, String, Integer>> ds = env.addSource(null, null);
@@ -40,7 +40,7 @@ public class StreamSqlKafka {
 	    FlinkKafkaConsumer<Map> myConsumer =
 		new FlinkKafkaConsumer<>(KAFKATOPIC, new SchemaUT(), properties);
 	        	    
-	    DataStream<Map> ds =  env.addSource(myConsumer);
+	   DataStream<Map> ds =  env.addSource(myConsumer);
 	    DataStream<Order> orderB = env.fromCollection(Arrays.asList(
 					new Order(2L, "pen", 3),
 

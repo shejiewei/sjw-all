@@ -30,13 +30,13 @@ public class KafkaMessageStreaming {
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
 
         Properties props = new Properties();
-        props.setProperty("bootstrap.servers", "192.168.93.5:9092");
-        props.setProperty("zookeeper.connect", "192.168.93.5:2181");
+        props.setProperty("bootstrap.servers", "120.78.216.6:9017");
+        props.setProperty("zookeeper.connect", "120.78.216.6:9018");
         props.setProperty("group.id", "test-consumer-group");
 
         //    args[0] = "test-0921";  //传入的是kafka中的topic
         FlinkKafkaConsumer010<String> consumer =
-                new FlinkKafkaConsumer010<>("test", new SimpleStringSchema(), props);
+                new FlinkKafkaConsumer010<>("test121", new SimpleStringSchema(), props);
        // consumer.assignTimestampsAndWatermarks(new MessageWaterEmitter());
 
         DataStream<Tuple2<String, Long>> keyedStream = env

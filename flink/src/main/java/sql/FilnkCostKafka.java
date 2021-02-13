@@ -90,10 +90,10 @@ public class FilnkCostKafka {
 
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         final StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
-        String topic = "test1";
+        String topic = "test121";
         Properties prop = new Properties();
-        prop .setProperty("bootstrap.servers", "192.168.93.5:9092");
-        prop.setProperty("zookeeper.connect", "192.168.93.5:2181");
+        prop .setProperty("bootstrap.servers", "120.78.216.6:9017");
+        prop.setProperty("zookeeper.connect", "120.78.216.6:9018");
         prop .setProperty("group.id", "test-consumer-group");
 
         FlinkKafkaConsumer010<String> consumer = new FlinkKafkaConsumer010<String>(topic, new SimpleStringSchema(), prop);
