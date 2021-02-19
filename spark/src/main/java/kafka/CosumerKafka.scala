@@ -42,13 +42,13 @@ object CosumerKafka {
     val topicsSet = Array("test")
     val kafkaParams = mutable.HashMap[String, String]()
     //必须添加以下参数，否则会报错
-    kafkaParams.put("bootstrap.servers", "192.168.93.5:9092")
+    kafkaParams.put("bootstrap.servers", "192.168.93.6:9092")
    // kafkaParams.put("bootstrap.servers", "192.168.93.5:9092")
     kafkaParams.put("group.id", "test-consumer-group")
     kafkaParams.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
     kafkaParams.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
 
-    val topics = Array("test1")
+    val topics = Array("test")
     //直连方式
     val messages = KafkaUtils.createDirectStream[String, String](
       ssc,

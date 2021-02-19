@@ -54,7 +54,11 @@
            <artifactId>spark-streaming_2.11</artifactId>
            <version>2.3.0</version>
        </dependency>
-
+       <dependency>
+           <groupId>org.apache.spark</groupId>
+           <artifactId>spark-streaming-flume_2.11</artifactId>
+           <version>2.3.0</version>
+       </dependency>
       <!-- <dependency>
            <groupId>org.apache.hadoop</groupId>
            <artifactId>hadoop-client</artifactId>
@@ -117,6 +121,21 @@
            <artifactId>fastutil</artifactId>
            <version>7.0.6</version>
        </dependency>
+
+       <dependency>
+           <groupId>org.apache.kafka</groupId>
+           <artifactId>kafka_2.11</artifactId>
+           <version>0.8.2.1</version>
+       </dependency>
+       <!-- spark-streaming kafka -->
+<!--
+       <dependency>
+           <groupId>org.apache.spark</groupId>
+           <artifactId>spark-streaming-kafka-0-8_${scala.binary.version}</artifactId>
+           <version>${spark.version}</version>
+       </dependency>
+-->
+
    </dependencies>
 
     <build>
