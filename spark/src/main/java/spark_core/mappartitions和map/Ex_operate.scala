@@ -1,4 +1,4 @@
-package spark_core.mappartitions
+package spark_core.mappartitions和map
 
 /**
   * Created by shejiewei on 2021/1/13.
