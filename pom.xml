@@ -32,13 +32,13 @@
         <module>rocketmq</module>
         <module>redis</module>
         <module>springboot</module>
-        <module>youfanshop</module>
+       <!-- <module>youfanshop</module>-->
         <module>springboot</module>
         <module>spark</module>
         <module>flink</module>
         <module>geomesa</module>
-        <module>calcite</module>
-        <module>calcite</module>
+<!--        <module>calcite</module>
+        <module>calcite</module>-->
     </modules>
     <repositories>
         <repository>

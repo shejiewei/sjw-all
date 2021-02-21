@@ -1,0 +1,13 @@
+hello
+flink
+spark
+hadoop
+hbase
+hive
+kafka
+newWord
+tt8888
+8888
+8888
+zzzzzz
+
